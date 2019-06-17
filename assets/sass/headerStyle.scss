@@ -1,0 +1,47 @@
+$warning-color: #eab971;
+$danger-color:#ff4350;
+$info-color: #3bd5a2;
+$medium-text-size:16px;
+$small-text-size:14px;
+
+header
+{
+    padding: 25px 0;
+    line-height: 24px;
+}
+.title
+{
+    color: #5a5c6b;
+    font-size: $medium-text-size;
+    text-align: center;
+    margin-right: 10px;
+}
+.costLabel
+{
+    color: #afb2be;
+    font-size: $medium-text-size;
+    margin-left: 5px;
+}
+.costDetail
+{
+    font-size: 14px;
+    color: #757781;
+}
+.header-nav
+{
+    color: #85889e;
+    font-size: $small-text-size;
+}
+
+.infoLabel
+{
+color:$info-color;
+}
+.warningLabel
+{
+color:$warning-color;
+}
+.dangerLabel
+{
+ color: $danger-color;
+}

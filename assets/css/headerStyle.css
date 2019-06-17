@@ -1,0 +1,40 @@
+header {
+  padding: 25px 0;
+  line-height: 24px;
+}
+
+.title {
+  color: #5a5c6b;
+  font-size: 16px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.costLabel {
+  color: #afb2be;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.costDetail {
+  font-size: 14px;
+  color: #757781;
+}
+
+.header-nav {
+  color: #85889e;
+  font-size: 14px;
+}
+
+.infoLabel {
+  color: #3bd5a2;
+}
+
+.warningLabel {
+  color: #eab971;
+}
+
+.dangerLabel {
+  color: #ff4350;
+}
+/*# sourceMappingURL=headerStyle.css.map */

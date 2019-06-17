@@ -1,0 +1,41 @@
+.captionFigure {
+  display: inline-block;
+  text-align: center;
+}
+
+.captionFigure img {
+  margin-bottom: 20px;
+}
+
+.caption, .largeCaption, .smallCaption {
+  direction: ltr;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+
+.largeCaption {
+  font-size: 20px;
+  display: block;
+  color: #afb2be;
+}
+
+.smallCaption {
+  font-size: 13px;
+  color: #53555d;
+}
+
+.WorthCurrency label {
+  font-size: 48px;
+  line-height: 54px;
+  direction: ltr;
+  color: #afb2be;
+}
+
+.WorthCurrency label span {
+  color: #5a5c6c;
+}
+
+.d-flex.flex-column div {
+  margin: 10px;
+}
+/*# sourceMappingURL=singleStyle.css.map */
