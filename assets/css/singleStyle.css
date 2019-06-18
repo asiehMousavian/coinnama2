@@ -1,6 +1,12 @@
+.container {
+  line-height: 20px;
+  width: 80%;
+}
+
 .captionFigure {
   display: inline-block;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 .captionFigure img {
@@ -10,7 +16,6 @@
 .caption, .largeCaption, .smallCaption {
   direction: ltr;
   text-transform: uppercase;
-  line-height: 20px;
 }
 
 .largeCaption {
@@ -24,18 +29,59 @@
   color: #53555d;
 }
 
-.WorthCurrency label {
+.worthCurrency label {
   font-size: 48px;
   line-height: 54px;
   direction: ltr;
   color: #afb2be;
 }
 
-.WorthCurrency label span {
+.worthCurrency label span {
   color: #5a5c6c;
 }
 
-.d-flex.flex-column div {
-  margin: 10px;
+.lastWeek label {
+  direction: ltr;
+  color: #3bd5a2;
+  font-size: 16px;
+}
+
+.lastWeek label span {
+  color: #5a5c6b;
+}
+
+.report-wrapper {
+  background: #1b1c21;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.report-wrapper .row {
+  padding: 0 15px;
+}
+
+.report-wrapper .rowHeader {
+  color: #595b67;
+  font-size: 16px;
+  padding: 15px 0 5 0;
+}
+
+.report-wrapper .rowTitle {
+  color: #dddfe8;
+  font-size: 20px;
+  direction: ltr;
+  padding: 5px 0 15px 0;
+}
+
+.chart-wrapper {
+  background: #1b1c21;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.chart-wrapper .mychart {
+  width: 100%;
+  max-height: 600px;
+  height: 100vh;
 }
 /*# sourceMappingURL=singleStyle.css.map */

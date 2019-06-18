@@ -53,7 +53,7 @@
 
         <!-- second Part  -->
         <div class="row">
-          <table id="datatable" class="myTable">
+          <table id="datatable" class="myTable" width="100%">
             <thead>
               <tr>
                 <th class="">#</th>
@@ -291,11 +291,25 @@
       });
 
 
+      $('#datatable').DataTable({
+        //scrollY:        400,
+        "bInfo": false,
+        "bLengthChange": false,
+        "bFilter": false,
+        "columnDefs": [{ "orderable": false, "targets": [0, 1, 5] }],
+        scrollX:        true,
+        fixedColumns:   true,
+        fixedHeader: true,
+        fixedColumns: {
+            leftColumns: 1,
+            leftColumns: 2
+        }
+    });
 
       //   $('#datatable').dataTable(
       //   {});
 
-      $('#datatable').dataTable({
+      $('#datatable1').dataTable({
         "bPaginate": true,
         "bLengthChange": false,
         "bFilter": false,

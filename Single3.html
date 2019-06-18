@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+    <title>Coinnam-panel-Single</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.rtl.css">
+
+
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/singleStyle.css">
+
+ <script type="text/javascrip" src="assets/js/core.js"></script>
+  <script type="text/javascrip" src="assets/js/charts.js"></script>
+  <script type="text/javascrip" src="assets/js/animated.js"></script>
+    
+<script>
+
+  
+      am4core.ready(function() {
+      // Themes begin
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+      // Create chart instance
+      var chart = am4core.create("chartdiv", am4charts.XYChart);
+      
+      // Add data
+      chart.data = [{
+        "date": "2012-03-01",
+        "price": 20
+      }, {
+        "date": "2012-03-02",
+        "price": 75
+      }, {
+        "date": "2012-03-03",
+        "price": 15
+      }, {
+        "date": "2012-03-04",
+        "price": 75
+      }, {
+        "date": "2012-03-05",
+        "price": 158
+      }, {
+        "date": "2012-03-06",
+        "price": 57
+      }, {
+        "date": "2012-03-07",
+        "price": 107
+      }, {
+        "date": "2012-03-08",
+        "price": 89
+      }, {
+        "date": "2012-03-09",
+        "price": 75
+      }, {
+        "date": "2012-03-10",
+        "price": 132
+      }, {
+        "date": "2012-03-11",
+        "price": 380
+      }, {
+        "date": "2012-03-12",
+        "price": 56
+      }, {
+        "date": "2012-03-13",
+        "price": 169
+      }, {
+        "date": "2012-03-14",
+        "price": 24
+      }, {
+        "date": "2012-03-15",
+        "price": 147
+      }];
+      
+      // Create axes
+      var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+      dateAxis.renderer.grid.template.location = 0;
+      dateAxis.renderer.minGridDistance = 50;
+      
+      var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+      valueAxis.logarithmic = true;
+      valueAxis.renderer.minGridDistance = 20;
+      
+      // Create series
+      var series = chart.series.push(new am4charts.LineSeries());
+      series.dataFields.valueY = "price";
+      series.dataFields.dateX = "date";
+      series.tensionX = 0.8;
+      series.strokeWidth = 3;
+      
+      var bullet = series.bullets.push(new am4charts.CircleBullet());
+      bullet.circle.fill = am4core.color("#fff");
+      bullet.circle.strokeWidth = 3;
+      
+      // Add cursor
+      chart.cursor = new am4charts.XYCursor();
+      chart.cursor.fullWidthLineX = true;
+      chart.cursor.xAxis = dateAxis;
+      chart.cursor.lineX.strokeWidth = 0;
+      chart.cursor.lineX.fill = am4core.color("#000");
+      chart.cursor.lineX.fillOpacity = 0.1;
+      
+      // Add scrollbar
+      chart.scrollbarX = new am4core.Scrollbar();
+      
+      // Add a guide
+      let range = valueAxis.axisRanges.create();
+      range.value = 90.4;
+      range.grid.stroke = am4core.color("#396478");
+      range.grid.strokeWidth = 1;
+      range.grid.strokeOpacity = 1;
+      range.grid.strokeDasharray = "3,3";
+      range.label.inside = true;
+      range.label.text = "Average";
+      range.label.fill = range.grid.stroke;
+      range.label.verticalCenter = "bottom";
+      
+      }); // end am4core.ready()
+
+</script>
+
+</head>
+<body>
+      <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
+              <div class=""><img src="assets/images/logo-copy.png" alt=""></div>
+              <div class="title ml-auto">مرجع اطلاع رسانی رمز ارزها</div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
+            <div class="d-flex">
+                <div class="costLabel">قیمت دلار سنا 19 اردیبهشت</div>
+                <div class="costDetail">14600 تومان <a href="" class="warningLabel" style="font-size: 12px">«تغییر»</a></div>
+            </div>
+ 
+              <div class=""><a class="header-nav" href="">تماس با ما</a></div>
+              <div class=""><a class="header-nav" href="">API</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="main" role="main">
+        <div class="mainarea">
+          <div class="container">
+
+            <div class="row d-flex flex-column align-items-center" >
+                <div class="captionFigure">
+                        <img src="assets/images/bitcoin-logo.png" alt="">
+                        <span class="largeCaption">bitcoin <span class="smallCaption"> (BTC)</span></span>
+                </div>
+                <div class="worthCurrency">
+                  <label for="">52.073.374 <span>$</span></label>
+                </div>
+                <div class="lastWeek">
+                  <label for="">+1.325$.(12.2%) <span>هفته گذشته</span></label>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-8 offset-2 report-wrapper">
+                <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                    <label class="rowHeader" for="">تعداد موجود</label>
+                    <label class="rowTitle" for="">3,325,125 <span>BTC</span></label>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                    <label class="rowHeader" for="">تعداد کل</label>
+                    <label class="rowTitle" for="">21,245,124 <span>BTC</span></label>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                      <label class="rowHeader" for="">حجم بازار</label>
+                      <label class="rowTitle" for="">300.000.000 $</label>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                      <label class="rowHeader" for="">حجم معاملات</label>
+                      <label class="rowTitle" for="">2.000.000 $</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 offset-2 chart-wrapper">
+                <div id="chartdiv" class="mychart">
+                  
+                </div>
+            </div>
+
+            </div>
+
+
+          </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="chartdiv" class="mychart"></div> -->
+     <!-- JS Files -->
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+ 
+
+
+
+
+</body>
+</html>
