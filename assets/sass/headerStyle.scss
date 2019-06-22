@@ -3,45 +3,150 @@ $danger-color:#ff4350;
 $info-color: #3bd5a2;
 $medium-text-size:16px;
 $small-text-size:14px;
+$xs-text-size:12px;
 
-header
-{
-    padding: 25px 0;
+header {
+    padding: 30px 0;
     line-height: 24px;
+
+    
 }
-.title
-{
+
+.title {
     color: #5a5c6b;
     font-size: $medium-text-size;
     text-align: center;
     margin-right: 10px;
 }
-.costLabel
-{
+
+.costLabel {
     color: #afb2be;
     font-size: $medium-text-size;
     margin-left: 5px;
 }
-.costDetail
-{
-    font-size: 14px;
+
+.costDetail {
+    font-size: $small-text-size;
     color: #757781;
 }
-.header-nav
-{
+
+.header-nav {
     color: #85889e;
     font-size: $small-text-size;
 }
 
-.infoLabel
-{
-color:$info-color;
+.infoLabel {
+    color: $info-color;
 }
-.warningLabel
-{
-color:$warning-color;
+
+.warningLabel {
+    color: $warning-color;
 }
-.dangerLabel
-{
- color: $danger-color;
+
+.dangerLabel {
+    color: $danger-color;
+}
+
+
+#page-nav label,
+#hamburger {
+    display: none;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+    .title,
+    .costLabel {
+        font-size: $small-text-size;
+    }
+
+    .costDetail,
+    .header-nav {
+        font-size: $xs-text-size;
+    }
+}
+
+@media screen and (max-width:425px) {
+
+    .logo-container {
+        flex-direction: column;
+    }
+
+    header {
+        position: relative;
+    }
+
+    #page-nav {
+        position: absolute;
+        width: 100px;
+        top: -43px;
+        left: 10px;
+
+        label {
+            display: inline-block;
+            color: #85889e;
+            font-size: 30px;
+        }
+
+        ul {
+            display: none !important;
+        }
+
+        input:checked~ul {
+            display: block !important;
+        }
+
+    }
+}
+
+@media screen and (max-width:375px) {
+
+    .logo-container {
+        flex-direction: column;
+    }
+
+    header {
+        position: relative;
+    }
+
+    #page-nav {
+        position: relative;
+        width: 100px;
+        top: -43px;
+        left: 50px;
+
+        label {
+            display: inline-block;
+            color: #85889e;
+            font-size: 30px;
+        }
+
+        ul {
+            display: none !important;
+
+
+            // position: absolute;
+            // width: 100px;
+            // margin: -100px 0 0 -50px;
+            // padding-top: 125px;
+            
+            // -webkit-font-smoothing: antialiased;
+            
+            // transform-origin: 0% 0%;
+            // transform: translate(-100%, 0);
+            
+            // transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        }
+
+        input:checked~ul {
+            display: block !important;
+            // transform: none;
+
+        }
+   
+    }
+
+
 }

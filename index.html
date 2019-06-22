@@ -28,19 +28,28 @@
   <header id="header">
     <div class="container">
       <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
+        <div class="logo-container col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
           <div class=""><img src="assets/images/logo-copy.png" alt=""></div>
           <div class="title ml-auto">مرجع اطلاع رسانی رمز ارزها</div>
-        </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
-          <div class="d-flex">
+          <div class="row">
+          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-10 col-12 d-flex">
             <div class="costLabel">قیمت دلار سنا 19 اردیبهشت</div>
             <div class="costDetail">14600 تومان <a href="" class="warningLabel" style="font-size: 12px">«تغییر»</a>
             </div>
           </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-2 col-2">
+          <nav id="page-nav" class="" role="navigation">
+              <label for="hamburger">&#9776;</label>
+              <input type="checkbox" id="hamburger"/>
+            <ul class="d-flex justify-content-between">
+              <li class="ml-auto"><a class="header-nav" href="">تماس با ما</a></li>
+              <li class="mr-auto"><a class="header-nav" href="">API</a></li>
+            </ul>
+          </nav>
+        </div>
+     
 
-          <div class=""><a class="header-nav" href="">تماس با ما</a></div>
-          <div class=""><a class="header-nav" href="">API</a></div>
         </div>
       </div>
     </div>
@@ -52,8 +61,8 @@
       <div class="container">
 
         <!-- second Part  -->
-        <div class="row">
-          <table id="datatable" class="myTable">
+        
+          <table id="datatable" class="myTable" width="100%">
             <thead>
               <tr>
                 <th class="">#</th>
@@ -177,11 +186,12 @@
           </table>
 
 
-        </div>
+       
         <!-- third Part -->
 
         <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 coinNama">
+
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 coinNamaDescription">
             <h1>کوین نما چیست؟</h1>
             <p>
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
@@ -194,7 +204,8 @@
             </p>
             <button class="btn btn-lg">مستندات فنی API</button>
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 calculator">
+
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 calculator">
             <h1>ماشین حساب</h1>
             <form action="">
 
@@ -203,20 +214,146 @@
                 <input type="text" class="form-control" id="" value="3,500">
               </div>
 
-              <div class="convertDiv row d-flex">
+              <div class="convertDiv form-group row d-flex">
 
-                <div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 cal-form-group">
-                  <img src="assets/images/usa.png" alt="" class="rightInput">
-                  <input type="text" class="form-control" id="CoinInput" disabled>
-                  <img src="/assets/images/arrow-down.png" alt="" class="rightDownArrow">
+                <div class="country-Wrapper col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                  <div class="countryInput-Wrapper form-control d-flex justify-content-between">
+                      <div class="mr-auto"> 
+                          <img id="contryImg" src="assets/images/usa.png" alt="" class="leftImg">
+                      </div>
+                      <div class="mr-auto"> 
+                          <span id='lgSpan' class="lgSpan">USD</span>
+                          <span id='smSpan' class="smSpan">us dollar</span>
+                        </div>
+                        <div class="ml-auto flex-shrink-1">
+                            <img src="/assets/images/arrow-down.png" alt="" class="rightImg">
+                        </div>
+                  </div>
+                  <div class="countryDropDown-wrapper">
+                      <div class="listItem">
+                          <div class="d-flex justify-content-between">
+                              <div class="mr-auto"> 
+                                  <span class="lgSpan">test1</span>
+                                  <span class="smSpan">test1-1</span>
+                              </div>
+                              <div class=""> 
+                                  <img src="assets/images/btCoin.png" alt="" class="">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="listItem">
+                        <div class="d-flex justify-content-between">
+                          
+                            <div class="mr-auto"> 
+                                <span class="lgSpan">USD</span>
+                                <span class="smSpan">us dollar</span>
+                            </div>
+                            <div class=""> 
+                                <img src="assets/images/usa.png" alt="" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listItem">
+                      <div class="d-flex justify-content-between">
+                        
+                          <div class="mr-auto"> 
+                              <span class="lgSpan">USD</span>
+                              <span class="smSpan">us dollar</span>
+                          </div>
+                          <div class=""> 
+                              <img src="assets/images/usa.png" alt="" class="">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="listItem">
+                    <div class="d-flex justify-content-between">
+                      
+                        <div class="mr-auto"> 
+                            <span class="lgSpan">USD</span>
+                            <span class="smSpan">us dollar</span>
+                        </div>
+                        <div class=""> 
+                            <img src="assets/images/usa.png" alt="" class="">
+                        </div>
+                    </div>
+                </div>
+
+                  </div>
                 </div>
 
                 <button type="button" id="convertBtn"></button>
 
-                <div class="form-group col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 cal-form-group">
-                  <img src="assets/images/btCoin.png" alt="" class="leftInput">
-                  <input type="text" class="form-control" id="CountryInput" disabled>
-                  <img src="/assets/images/arrow-down.png" alt="" class="leftDownArrow">
+                <div class="coin-Wrapper col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+
+                    <div class="coinInput-Wrapper form-control d-flex justify-content-between">
+
+                        <div class="mr-auto"> 
+                            <img  id="coinImg" src="assets/images/btCoin.png" alt="" class="leftImg">
+                        </div>
+                        <div class="mr-auto"> 
+                            <span id="lgSpan" class="lgSpan">btc</span>
+                            <span id="smSpan" class="smSpan">bitcoin</span>
+                          </div>
+                          <div class="ml-auto">
+                              <img   src="/assets/images/arrow-down.png" alt="" class="rightImg">
+                          </div>
+                    </div>
+
+                    <div class="coinDropDown-wrapper">
+
+                      <div class="listItem">
+                          <div class="d-flex justify-content-between">
+                            
+                              <div class="mr-auto"> 
+                                  <span  class="lgSpan">USD</span>
+                                  <span  class="smSpan">us dollar</span>
+                              </div>
+                              <div class=""> 
+                                  <img src="assets/images/usa.png" alt="" class="">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="listItem">
+                        <div class="d-flex justify-content-between">
+                          
+                            <div class="mr-auto"> 
+                                <span class="lgSpan">test2</span>
+                                <span class="smSpan">test22</span>
+                            </div>
+                            <div class=""> 
+                                <img src="assets/images/usa.png" alt="" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listItem">
+                      <div class="d-flex justify-content-between">
+                        
+                          <div class="mr-auto"> 
+                              <span class="lgSpan">USD</span>
+                              <span class="smSpan">us dollar</span>
+                          </div>
+                          <div class=""> 
+                              <img src="assets/images/usa.png" alt="" class="">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="listItem">
+                    <div class="d-flex justify-content-between">
+                      
+                        <div class="mr-auto"> 
+                            <span class="lgSpan">USD</span>
+                            <span class="smSpan">us dollar</span>
+                        </div>
+                        <div class=""> 
+                            <img src="assets/images/usa.png" alt="" class="">
+                        </div>
+                    </div>
+                </div>
+                    
+
+                  </div>
+
+
 
                 </div>
               </div>
@@ -230,14 +367,12 @@
           </div>
 
         </div>
+
       </div>
     </div>
   </div>
 
 <!-- modal-->
-
-
-
   <div class="modal fade" id="convertModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -255,7 +390,7 @@
             <div class="col-8" >
                 <div class="form-group changeRate-form-group">
                     <input class="form-control" type="text" value="14,600">
-                    <span class="">نزخ پایه :</span>
+                    <span class="">نرخ پایه :</span>
                 </div>
 
             </div>
@@ -269,11 +404,6 @@
     </div>
   </div>
   
-
-
-
-
-
   <!-- JS Files -->
   <script type="text/javascript" src="assets/js/jquery.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
@@ -283,52 +413,97 @@
   <script type="text/javascript" src="assets/js/dataTables.fixedColumns.min.js"></script>
 
   <script type="text/javascript">
+
     $(document).ready(function () {
       
-      $('#convertBtn').click(function()
-      {
+      $('#convertBtn').click(function () {
         $('#convertModal').modal('show');
       });
 
-
-
-      //   $('#datatable').dataTable(
-      //   {});
-
-      $('#datatable').dataTable({
-        "bPaginate": true,
+      $('#datatable').DataTable({
+        //scrollY:        400,
+        "bInfo": false,
         "bLengthChange": false,
         "bFilter": false,
-        "bSort": true,
-        "bInfo": false,
-        "bAutoWidth": true,
-        "columnDefs": [{ "orderable": false, "targets": [0, 1, 5] }]
-
-        // scrollX: true,
-        //   scrollCollapse: true,
-        //    fixedColumns: { leftColumns: 2 }
+        "columnDefs": [{ "orderable": false, "targets": [0, 1, 5] }],
+        scrollX: true,
+        fixedColumns: true,
+        fixedHeader: true,
+        fixedColumns: {
+          leftColumns: 1,
+          leftColumns: 2
+        }
       });
+
+      $(window).resize(function () { location.reload(); });
+
       $('.myTable tr th').click(function () {
         $(this).find('img').toggle();
       });
-      $("#leftSelect").select2({
-        // theme: "default",
-        // dir: "rtl",
-        // minimumResultsForSearch: -1,
-        // language: "fa"
+
+      $('.countryInput-Wrapper').on('click', function () {
+        $('.countryDropDown-wrapper').toggle();
+
       });
-      // $('#convertModal').modal('show');
 
-      // $('#convertBtn').click(function()
-      // {
-      //   $('#convertModal').modal('show');
+      $('.countryDropDown-wrapper .listItem').on('click', function () {
+
+        var imgSrc = $(this).find('img').attr('src');
+        var span1 = $(this).find('.lgSpan').text();
+        var span2 = $(this).find('.smSpan').text();
+        $('#contryImg').attr('src', imgSrc);
+        $('.countryInput-Wrapper #lgSpan').text(span1);
+        $('.countryInput-Wrapper #smSpan').text(span2);
+        $('.countryDropDown-wrapper').toggle();
+      });
+
+      $('.coinInput-Wrapper').on('click', function () {
+        $('.coinDropDown-wrapper').toggle();
+      });
+
+      $('.coinDropDown-wrapper .listItem').on('click', function () {
+
+        var imgSrc = $(this).find('img').attr('src');
+        var span1 = $(this).find('.lgSpan').text();
+        var span2 = $(this).find('.smSpan').text();
+        $('#coinImg').attr('src', imgSrc);
+        $('.coinInput-Wrapper #lgSpan').text(span1);
+        $('.coinInput-Wrapper #smSpan').text(span2);
+        $('.coinDropDown-wrapper').toggle();
+      });
+//       $('.md-select').on('click', function(){
+//   $('.md-select').toggleClass('active')
+// })
+
+// $('.md-select ul li').on('click', function() {
+//   var v = $(this).text();
+//   $('.md-select ul li').not($(this)).removeClass('active');
+//   $(this).addClass('active');
+//   // $('.md-select label button').text(v)
+//   $('.coinInput-Wrapper input').val(v);
+// })
+
+
+      // $("#leftSelect").select2({
+      //   // theme: "default",
+      //   // dir: "rtl",
+      //   // minimumResultsForSearch: -1,
+      //   // language: "fa"
       // });
-
-
-
    
+      // $('#datatable1').dataTable({
+      //   "bPaginate": true,
+      //   "bLengthChange": false,
+      //   "bFilter": false,
+      //   "bSort": true,
+      //   "bInfo": false,
+      //   "bAutoWidth": true,
+      //   "columnDefs": [{ "orderable": false, "targets": [0, 1, 5] }]
 
-
+      //   // scrollX: true,
+      //   //   scrollCollapse: true,
+      //   //    fixedColumns: { leftColumns: 2 }
+      // });
 
     // $(window).resize(function () {
 
@@ -350,21 +525,6 @@
 
     //     });
 
-    //   }
-    //   else {
-    //     $('#datatable').dataTable({
-    //       "bDestroy": true
-    //     }).fnDestroy();
-    //     $('#datatable').dataTable({
-    //       "bPaginate": true,
-    //       "bLengthChange": false,
-    //       "bFilter": false,
-    //       "bSort": true,
-    //       "bInfo": false,
-    //       "bAutoWidth": true,
-    //       "columnDefs": [{ "orderable": false, "targets": [0, 1, 5] }]
-    //     });
-    //     $('div.dataTables_wrapper').css('width', '100%');
     //   }
     // });
 

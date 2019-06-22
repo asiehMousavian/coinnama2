@@ -1,3 +1,7 @@
+body {
+  font-family: AnjomanFaNum-Regular;
+}
+
 .container {
   line-height: 20px;
   width: 80%;
@@ -54,9 +58,6 @@
   background: #1b1c21;
   border-radius: 10px;
   margin-top: 20px;
-}
-
-.report-wrapper .row {
   padding: 0 15px;
 }
 
@@ -73,6 +74,10 @@
   padding: 5px 0 15px 0;
 }
 
+.report-wrapper .lightSpan {
+  font-family: AnjomanFaNum-Light;
+}
+
 .chart-wrapper {
   background: #1b1c21;
   border-radius: 10px;
@@ -83,5 +88,34 @@
   width: 100%;
   max-height: 600px;
   height: 100vh;
+}
+
+@media screen and (max-width: 425px) {
+  .report-wrapper .rowHeader {
+    font-size: 13px;
+  }
+  .report-wrapper .rowTitle {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .report-wrapper .rowHeader {
+    font-size: 13px;
+    padding: 5px 0;
+  }
+  .report-wrapper .rowTitle {
+    font-size: 13px;
+    padding: 5px 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .report-wrapper .rowHeader {
+    font-size: 10px;
+  }
+  .report-wrapper .rowTitle {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=singleStyle.css.map */

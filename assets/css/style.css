@@ -1,345 +1,393 @@
-
-/*third part*/
-
-h1
-{
-    color:#5a5c6b;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    margin: 10px 0px;
+body {
+  font-family: AnjomanFaNum-Regular;
 }
 
-.coinNama p
-{
-    color: #afb2be;
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 24px;
-}
-.coinNama button
-{
-    border-radius: 18px;
-    background-color:#383e5c;
-    color: #d7d8de;
-    font-size: 12px;
-    line-height: 16px;
-    width: 128px;
+.warningLabel {
+  color: #eab971;
 }
 
-.calculator form
-{
-    border-radius: 10px;
-    background-color: #1b1c21;
-    padding: 30px;
+.dangerLabel {
+  color: #ff4350;
 }
 
-.form-group .form-control
-{
-    font-size: 30pX;
-    line-height: 48px;
-    border-radius: 10px;
-    background-color: #15161a;
-    border: none;
-    direction: ltr;
-    color: #afb2be;
+.infoLabel {
+  color: #3bd5a2;
 }
 
-.form-control:focus
-{
-    background-color: #15161a;
-}
-.cal-form-group
-{
-    position: relative;
-}
-.cal-form-group img
-{
-    position: absolute;
+h1 {
+  color: #5a5c6b;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 10px 0px;
 }
 
-.cal-form-group .form-control
-{
-    padding-left: 15%;
-}
-.cal-form-group img.calInput
-{
-    top: 25%;
-    left: 5%;
-}
-
-.cal-form-group img.rightInput
-{
-    top: 15%;
-    left: 25%;
+.form-control {
+  font-size: 30pX;
+  line-height: 48px;
+  border-radius: 10px;
+  background-color: #15161a;
+  border: none;
+  direction: ltr;
+  color: #afb2be;
 }
 
-.cal-form-group img.leftInput
-{
-    top: 15%;
-    left: 15%;
+.form-control:focus {
+  background-color: #15161a;
 }
 
-.cal-form-group img.rightDownArrow
-{
-    top: 50%;
-    right: 27%;
-}
-.cal-form-group img.leftDownArrow
-{
-    top: 50%;
-    right: 32%;
+.coinNamaDescription p {
+  color: #afb2be;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+  font-family: "AnjomanFaNum-Light";
 }
 
-.convertDiv
-{
-    position: relative;
-}
-.convertDiv div
-{
-    width: 50%;
-}
-#convertBtn
-{
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    background: #15161a  url(/assets/images/iterative.png) no-repeat center; 
-     border: 10px solid #1b1c21;
-     margin: 0px 6px;
-     border-radius: 50%;
-     left: 40%;
-     bottom: 5%;
-     z-index: 100;
+.coinNamaDescription button {
+  border-radius: 18px;
+  background-color: #383e5c;
+  color: #d7d8de;
+  font-size: 12px;
+  line-height: 16px;
+  width: 128px;
 }
 
-input.result
-{
-    color: #00cc9b !important;
+.calculator form {
+  border-radius: 10px;
+  background-color: #1b1c21;
+  padding: 30px;
 }
 
-.cal-form-group span.equal
-{
-    position: absolute;
-    font-size: 25px;
-    top: 20%;
-    left: 5%;
-    color: #00cc9b;
+.calculator input.result {
+  color: #00cc9b !important;
 }
 
-.customSelect
-{
-    position: relative;
-    direction: ltr;
-    overflow: scroll;
-    height: 50px;
-}
-.customSelect img
-{
-    width: 24px;
-    height: 24px;
+.calculator .cal-form-group {
+  position: relative;
 }
 
+.calculator .cal-form-group img {
+  position: absolute;
+}
+
+.calculator .cal-form-group img.calInput {
+  top: 25%;
+  left: 5%;
+}
+
+.calculator .cal-form-group span.equal {
+  position: absolute;
+  font-size: 25px;
+  top: 20%;
+  left: 5%;
+  color: #00cc9b;
+}
+
+.calculator .cal-form-group .form-control {
+  padding-left: 15%;
+}
+
+.calculator .convertDiv {
+  position: relative;
+}
+
+.calculator .convertDiv span {
+  line-height: 1px;
+  text-transform: uppercase;
+  color: #afb2be;
+  text-align: left;
+}
+
+.calculator .convertDiv .lgSpan {
+  font-size: 12px;
+  display: block;
+  margin-top: 10px;
+}
+
+.calculator .convertDiv .smSpan {
+  font-size: 10px;
+}
+
+.calculator .convertDiv .country-Wrapper {
+  position: relative;
+}
+
+.calculator .convertDiv .country-Wrapper .countryInput-Wrapper .leftImg {
+  margin-left: 30px;
+}
+
+.calculator .convertDiv .country-Wrapper .countryInput-Wrapper .rightImg {
+  margin-right: 15px;
+}
+
+.calculator .convertDiv .country-Wrapper .countryDropDown-wrapper {
+  position: absolute;
+  width: 85%;
+  padding: 5px;
+  direction: ltr;
+  display: none;
+  z-index: 100;
+  background: #15161a;
+  margin-top: 1px;
+  height: 150px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  cursor: pointer;
+}
+
+.calculator .convertDiv .country-Wrapper .countryDropDown-wrapper .listItem {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.calculator .convertDiv .country-Wrapper .countryDropDown-wrapper .listItem img {
+  margin-right: 10px;
+}
+
+.calculator .convertDiv .country-Wrapper .countryDropDown-wrapper .listItem .lgSpan {
+  margin-bottom: 10px;
+}
+
+.calculator .convertDiv .country-Wrapper .countryDropDown-wrapper .listItem .smSpan {
+  font-size: 8px;
+}
+
+.calculator .convertDiv .coin-Wrapper {
+  position: relative;
+}
+
+.calculator .convertDiv .coin-Wrapper .coinInput-Wrapper {
+  cursor: pointer;
+}
+
+.calculator .convertDiv .coin-Wrapper .coinInput-Wrapper .leftImg {
+  margin-left: 10px;
+}
+
+.calculator .convertDiv .coin-Wrapper .coinInput-Wrapper .rightImg {
+  margin-right: 35px;
+}
+
+.calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper {
+  position: absolute;
+  width: 81%;
+  padding: 5px;
+  direction: ltr;
+  display: none;
+  z-index: 100;
+  background: #15161a;
+  margin-top: 1px;
+  height: 150px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  left: 15px;
+}
+
+.calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper .listItem {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper .listItem img {
+  margin-right: 10px;
+}
+
+.calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper .listItem .lgSpan {
+  margin-bottom: 10px;
+}
+
+.calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper .listItem .smSpan {
+  font-size: 8px;
+}
+
+.calculator .convertDiv #convertBtn {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  background: #15161a url(/assets/images/iterative.png) no-repeat center;
+  border: 10px solid #1b1c21;
+  margin: 0px 6px;
+  border-radius: 50%;
+  left: 40%;
+  top: -13%;
+  z-index: 100;
+}
 
 /* --- Modal ----*/
+.modal {
+  border-radius: 10px;
+}
 
-.modal
-{
-    border-radius: 10px;
+.modal .modal-content {
+  background: #1b1c21;
+  padding: 10px;
 }
-.modal-content
-{
-    background: #1b1c21;
-    padding: 10px;
+
+.modal .modal-header {
+  border: none;
 }
-.modal-header
-{
-    border: none;
+
+.modal .modal-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #e8e9f1;
 }
-.modal-title
-{
-    font-size: 16px;
-    line-height: 24px;
-    color: #e8e9f1;
+
+.modal .modal-body p {
+  color: #afb2be !important;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: justify;
 }
-.modal-body p
-{
+
+.modal .modal-body .changeRate-form-group {
+  position: relative;
+}
+
+.modal .modal-body .changeRate-form-group .form-dontrol {
+  padding-left: 5px;
+}
+
+.modal .modal-body .changeRate-form-group span {
+  font-size: 10px;
+  line-height: 16px;
+  color: #53555c;
+  position: absolute;
+  top: 30%;
+  right: 5%;
+}
+
+.modal .modal-footer {
+  border: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 0;
+}
+
+.modal .modal-footer button {
+  color: #d7d8de;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 18px;
+  width: 80px;
+  height: 36px;
+  background: transparent;
+  border: none;
+}
+
+.modal .modal-footer .Btnprimary {
+  background: #0b9171 !important;
+}
+
+/* --- Responsive Set*/
+@media only screen and (max-width: 992px) {
+  tr {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  tr {
+    height: 40px;
+  }
+  div.dataTables_wrapper {
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: scroll;
+  }
+  .coinNamaDescription p {
     color: #afb2be;
     font-size: 14px;
+    font-weight: 100;
     line-height: 24px;
-    color: #e8e9f1;
     text-align: justify;
-}
-.modal-footer
-{
-    border: none;
-    justify-content: flex-start;
-    padding-top: 0;
-}
-.modal-footer button
-{
-    color:  #d7d8de;
-    font-size: 12px;
-    line-height: 16px;
-    border-radius: 18px;
-    width: 80px;
-    height: 36px;
-    background: transparent;
-    border: none;
-}
-.Btnprimary
-{
-    background: #0b9171 !important;
-}
-
-.changeRate-form-group
-{
-    position: relative;
-}
-.changeRate-form-group .form-dontrol
-{
-padding-left: 5px;
-}
-.changeRate-form-group span
-{
-    font-size: 10px;
-    line-height: 16px;
-    color: #53555c;
-    position: absolute;
-    top: 30%;
-    right: 5%;
-}
-/* --- Responsive Set*/
-
-@media only screen and (max-width:992)
-{
-    div.dataTables_wrapper
-    {
-        /* margin: 0 auto;
-        padding: 0;
-        overflow-x: scroll; */
-    }
-    tr
-    {
-        height: 40px;
-    }
-   
-}
-
-@media only screen and (max-width:768)
-{
-    tr
-    {
-        height: 40px;
-    }
-   
-    /* th, td { white-space: nowrap; } */
-    div.dataTables_wrapper
-    {
-        /* width: 300px; */
-        margin: 0 auto;
-        padding: 0;
-        overflow-x: scroll;
-    }
-   
-}
-
-
-@media only screen and (max-width: 990px)
- {
-    #conVertBtn
-    {
-        left: 33%;
-    }
   }
-  @media only screen and (max-width: 980px )
-  {
-     #conVertBtn
-     {
-         left: 34%;
-     }
-   }
+  .calculator .convertDiv #convertBtn {
+    width: 72px;
+    height: 72px;
+    left: 43%;
+    top: -10%;
+  }
+  .calculator .convertDiv .country-Wrapper .countryDropDown-wrapper {
+    width: 89%;
+  }
+  .calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper {
+    width: 88%;
+  }
+}
 
+@media only screen and (max-width: 425px) {
+  .calculator .convertDiv #convertBtn {
+    width: 72px;
+    height: 72px;
+    left: 38%;
+    top: -10%;
+  }
+  .calculator .convertDiv .country-Wrapper .countryInput-Wrapper .leftImg {
+    margin-left: 15px;
+    width: 30px;
+  }
+  .calculator .convertDiv .country-Wrapper .countryInput-Wrapper .rightImg {
+    margin-right: 2px;
+  }
+  .calculator .convertDiv .coinInput-Wrapper .leftImg {
+    margin-left: 10px;
+    width: 30px;
+  }
+  .calculator .convertDiv .coinInput-Wrapper .rightImg {
+    margin-right: 20px;
+  }
+  .calculator .convertDiv .country-Wrapper .country-Wrapper .countryDropDown-wrapper {
+    width: 80%;
+  }
+}
 
-   @media only screen and (max-width: 975px)
-   {
-      #conVertBtn
-      {
-          left: 33%;
-      }
-    }
-   
-    @media only screen and (max-width: 768px)
-    {
-       #conVertBtn
-       {
-           left: 40%;
-       }
+@media only screen and (max-width: 375px) {
+  .calculator .convertDiv #convertBtn {
+    width: 72px;
+    height: 72px;
+    left: 36%;
+    top: -10%;
+  }
+  .calculator .convertDiv span {
+    font-size: 10px !important;
+  }
+  .calculator .convertDiv .countryInput-Wrapper .leftImg {
+    margin-left: 10px;
+    width: 20px;
+  }
+  .calculator .convertDiv .countryInput-Wrapper .rightImg {
+    margin-right: 2px;
+  }
+  .calculator .convertDiv .coinInput-Wrapper .leftImg {
+    margin-left: 5px;
+    width: 20px;
+  }
+  .calculator .convertDiv .coinInput-Wrapper .rightImg {
+    margin-right: 20px;
+  }
+  .calculator .convertDiv .country-Wrapper .countryDropDown-wrapper {
+    width: 76%;
+  }
+  .calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper {
+    width: 77%;
+  }
+}
 
-       .coinNama p
-        {
-        color: #afb2be;
-        font-size: 14px;
-        font-weight: 100;
-        line-height: 24px;
-        text-align: justify;
-        }
-    }
-
-    @media only screen and (max-width: 480px)
-    {
-       #conVertBtn
-       {
-           left: 37%;
-       }
-     }
-
-     @media only screen and (max-width: 440px )
-     {
-        #conVertBtn
-        {
-            left: 37%;
-        }
-      }
-
-      @media only screen and (max-width: 414px)
-      {
-         #conVertBtn
-         {
-             left: 35%;
-         }
-       }
-
-       @media only screen and (max-width: 365px)
-       {
-        #conVertBtn
-        {
-            left: 32%;
-            /* border: 8px solid #1b1c21; */
-
-            /* width: 70px;
-            height: 70px; */
-
-        }
-        }
-        @media only screen and (max-width: 330px)
-        {
-         #conVertBtn
-         {
-             left: 34%;
-             width: 68px;
-             height: 68px;
-            bottom: 16%;
-         }
-         }
-
-
-
-
-
-
-
-
-
-
-
+@media only screen and (max-width: 320px) {
+  .calculator .convertDiv #convertBtn {
+    width: 72px;
+    height: 72px;
+    left: 31%;
+    top: -10%;
+  }
+  .calculator .convertDiv .countryInput-Wrapper .leftImg {
+    display: none;
+  }
+  .calculator .convertDiv .coinInput-Wrapper .leftImg {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

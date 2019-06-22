@@ -656,3 +656,245 @@
 
 
 
+   <!-- <input type="text" class="form-control" id="CoinInput" disabled> -->
+                      <!-- <input for="ul-id" type="text" class="form-control ng-binding" id="CoinInput" disabled> -->
+                      <!-- <div class="md-select">
+                          <label for="ul-id"><button for="ul-id" type="button" class="ng-binding">State 2</button></label>
+                          <ul role="listbox" id="ul-id" class="md-whiteframe-z1" aria-activedescendant="state2_AK" name="ul-id">
+                            <li role="option" id="state2_AK" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true">
+                              <img src="assets/images/usa.png" alt="" class="">
+                              <span style="display: block">test</span> test2
+                            </li>
+                            <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
+                                <img src="assets/images/usa.png" alt="" class="">
+                                <span style="display: block">test</span> test3
+                            </li>
+                            <li role="option" id="state2_AR" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
+                                <img src="assets/images/usa.png" alt="" class="">
+                                <span style="display: block">test</span> test4
+                            </li>
+                            <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
+                                <img src="assets/images/usa.png" alt="" class="">
+                                <span style="display: block">test</span> test5
+                            </li>
+                            <li role="option" id="state2_AR" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">
+                                <img src="assets/images/usa.png" alt="" class="">
+                                <span style="display: block">test</span> test6
+                            </li>
+                          </ul>
+                        
+                        </div> -->
+
+
+
+
+                        #CoinInput {
+
+                          display: block;
+                          // line-height: 48px;
+                          padding-left: 35%;
+                          text-align: left;
+                          width: 100%;
+                          z-index: 1;
+                          outline: none;
+                          overflow: hidden;
+                          // &:focus,
+                          // &:hover {
+                          //     // background: rgba(0,0,0,0.1);
+                          // }
+          
+                          &:after {
+                              content: '\25be';
+                              float: right;
+                              padding-right: 16px;
+                          }
+                      }
+          
+                      
+          
+                      // img.leftInput {
+                      //     position: absolute;
+          
+                      //     top: 15%;
+                      //     left: 15%;
+                      // }
+          
+                    
+          
+                      // img.leftDownArrow {
+                      //     position: absolute;
+          
+                      //     top: 50%;
+                      //     right: 32%;
+                      // }
+          
+                      .md-select {
+          
+                          *,
+                          :after,
+                          :before {
+                              box-sizing: border-box;
+                          }
+          
+                          position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          transform: translate(-50%, -50%);
+          
+                          display: block;
+                          margin: 10px 0 8px 0;
+                          padding-bottom: 2px;
+                          /*  position: relative;*/
+                          min-width: 180px;
+                          z-index: 2000;
+                          ;
+          
+          
+                          ul[role=listbox] {
+                              background-color: #1b1c21;
+                              // border: 1px solid wheat;
+          
+                              cursor: default;
+                              list-style: none;
+                              // line-height: 26px;
+                              overflow: hidden;
+                              margin: 0;
+                              max-height: 0;
+                              position: absolute;
+                              padding: 0;
+                              transform: translateY(-50%);
+                              transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+                              width: 100%;
+                              //   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
+          
+                              li {
+                                  height: 50px;
+                                  margin: 0;
+                                  padding: 15px 15px;
+                                  outline: none;
+                                  overflow: hidden;
+                                  position: relative;
+                                  // &:focus,
+                                  // &:hover,
+                                  // &.active {
+                                  //     //   background: rgba(0,0,0,0.1);
+                                  // }
+          
+                                  img {
+                                      position: absolute;
+                                      left: 10%;
+                                  }
+                              }
+                          }
+          
+                          &.active ul {
+                              max-height: 200px;
+                              overflow: auto;
+                              padding: 8px 0 16px 0px;
+                              z-index: 2;
+                              transition: all .2s ease
+                          }
+                      }
+
+
+                      <script>
+                        var chart;
+                        var chartData = [
+                            {
+                                "date": "2012-03-01",
+                                "price": 20
+                            },
+                            {
+                                "date": "2012-03-02",
+                                "price": 75
+                            },
+                            {
+                                "date": "2012-03-03",
+                                "price": 15
+                            },
+                            {
+                                "date": "2012-03-04",
+                                "price": 75
+                            },
+                            {
+                                "date": "2012-03-05",
+                                "price": 158
+                            },
+                            {
+                                "date": "2012-03-06",
+                                "price": 57
+                            }
+                           
+                          
+                        ];
+            
+                        var average = 90.4;
+            
+                        AmCharts.ready(function () {
+            
+                            // SERIAL CHART
+                            chart = new AmCharts.AmSerialChart();
+            
+                            chart.dataProvider = chartData;
+                            chart.categoryField = "date";
+                            chart.dataDateFormat = "YYYY-MM-DD";
+            
+                            // AXES
+                            // category
+                            var categoryAxis = chart.categoryAxis;
+                            categoryAxis.parseDates = true; // as our data is date-based, we set parseDates to true
+                            categoryAxis.minPeriod = "DD"; // our data is daily, so we set minPeriod to DD
+                            categoryAxis.dashLength = 1;
+                            categoryAxis.gridAlpha = 0.15;
+                            categoryAxis.axisColor = "#DADADA";
+            
+                            // value
+                            var valueAxis = new AmCharts.ValueAxis();
+                            valueAxis.axisColor = "#DADADA";
+                            valueAxis.dashLength = 1;
+                            valueAxis.logarithmic = true; // this line makes axis logarithmic
+                            chart.addValueAxis(valueAxis);
+            
+                            // GUIDE for average
+                            var guide = new AmCharts.Guide();
+                            guide.value = average;
+                            guide.lineColor = "#CC0000";
+                            guide.dashLength = 4;
+                            guide.label = "average";
+                            guide.inside = true;
+                            guide.lineAlpha = 1;
+                            valueAxis.addGuide(guide);
+            
+            
+                            // GRAPH
+                            var graph = new AmCharts.AmGraph();
+                            graph.type = "smoothedLine";
+                            graph.bullet = "round";
+                            graph.bulletColor = "#FFFFFF";
+                            graph.useLineColorForBulletBorder = true;
+                            graph.bulletBorderAlpha = 1;
+                            graph.bulletBorderThickness = 2;
+                            graph.bulletSize = 10;
+                            graph.title = "Price";
+                            graph.valueField = "price";
+                            graph.lineThickness = 2;
+                            graph.lineColor = "#00BBCC";
+                            chart.addGraph(graph);
+            
+                            // CURSOR
+                            var chartCursor = new AmCharts.ChartCursor();
+                            chartCursor.cursorPosition = "mouse";
+                            chart.addChartCursor(chartCursor);
+            
+                            // SCROLLBAR
+                            var chartScrollbar = new AmCharts.ChartScrollbar();
+                            chartScrollbar.graph = graph;
+                            chartScrollbar.scrollbarHeight = 30;
+                            chart.addChartScrollbar(chartScrollbar);
+            
+                            chart.creditsPosition = "bottom-right";
+            
+                            // WRITE
+                            chart.write("chartdiv");
+                        });
+                    </script>

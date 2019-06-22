@@ -1,0 +1,476 @@
+$medium-text-size:16px;
+$normal-color: #afb2be;
+$danger-color:#ff4350;
+$warning-color: #eab971;
+$info-color: #3bd5a2;
+
+
+body {
+    font-family: AnjomanFaNum-Regular;
+}
+
+.warningLabel {
+    color: $warning-color;
+}
+
+.dangerLabel {
+    color: $danger-color;
+
+}
+
+.infoLabel {
+    color: $info-color;
+}
+
+h1 {
+    color: #5a5c6b;
+    font-size: $medium-text-size;
+    line-height: 24px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+
+
+.form-control {
+    font-size: 30pX;
+    line-height: 48px;
+    border-radius: 10px;
+    background-color: #15161a;
+    border: none;
+    direction: ltr;
+    color: $normal-color;
+
+    &:focus {
+        background-color: #15161a;
+    }
+}
+
+
+.coinNamaDescription {
+    p {
+        color: #afb2be;
+        font-size: $medium-text-size;
+        font-weight: 100;
+        line-height: 24px;
+        font-family: "AnjomanFaNum-Light";
+
+    }
+
+    button {
+        border-radius: 18px;
+        background-color: #383e5c;
+        color: #d7d8de;
+        font-size: 12px;
+        line-height: 16px;
+        width: 128px;
+    }
+}
+
+
+.calculator {
+    form {
+        border-radius: 10px;
+        background-color: #1b1c21;
+        padding: 30px;
+    }
+
+    input.result {
+        color: #00cc9b !important;
+    }
+
+    .cal-form-group {
+        position: relative;
+
+        img {
+            position: absolute;
+        }
+
+        img.calInput {
+            top: 25%;
+            left: 5%;
+        }
+
+        span.equal {
+            position: absolute;
+            font-size: 25px;
+            top: 20%;
+            left: 5%;
+            color: #00cc9b;
+        }
+
+        .form-control {
+            padding-left: 15%;
+        }
+    }
+
+    .convertDiv {
+        position: relative;
+
+        span {
+            line-height: 1px;
+            text-transform: uppercase;
+            color: $normal-color;
+            text-align: left;
+        }
+
+        .lgSpan {
+            font-size: 12px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .smSpan {
+            font-size: 10px;
+        }
+
+        .country-Wrapper {
+            position: relative;
+
+            .countryInput-Wrapper {
+                .leftImg {
+                    margin-left: 30px;
+                }
+
+                .rightImg {
+                    margin-right: 15px;
+                }
+            }
+
+            .countryDropDown-wrapper {
+                position: absolute;
+                width: 85%;
+                padding: 5px;
+                direction: ltr;
+                display: none;
+                z-index: 100;
+                background: #15161a;
+                margin-top: 1px;
+                height: 150px;
+                border-radius: 10px;
+                overflow-y: scroll;
+                cursor: pointer;
+
+                .listItem {
+                    margin-bottom: 10px;
+                    cursor: pointer;
+
+                    img {
+                        margin-right: 10px;
+                    }
+
+                    .lgSpan {
+                        margin-bottom: 10px;
+                    }
+
+                    .smSpan {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+
+        .coin-Wrapper {
+            position: relative;
+
+            .coinInput-Wrapper {
+
+                // position: relative;
+                cursor: pointer;
+
+                .leftImg {
+                    margin-left: 10px;
+                }
+
+                .rightImg {
+                    margin-right: 35px;
+                }
+            }
+
+            .coinDropDown-wrapper {
+                position: absolute;
+                width: 81%;
+                padding: 5px;
+                direction: ltr;
+                display: none;
+                z-index: 100;
+                background: #15161a;
+                margin-top: 1px;
+                height: 150px;
+                border-radius: 10px;
+                overflow-y: scroll;
+                left: 15px;
+
+                .listItem {
+                    margin-bottom: 10px;
+                    cursor: pointer;
+
+                    img {
+                        margin-right: 10px;
+                    }
+
+                    .lgSpan {
+                        margin-bottom: 10px;
+                    }
+
+                    .smSpan {
+                        font-size: 8px;
+                    }
+
+
+                }
+            }
+        }
+
+        #convertBtn {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background: #15161a url(/assets/images/iterative.png) no-repeat center;
+            border: 10px solid #1b1c21;
+            margin: 0px 6px;
+            border-radius: 50%;
+            left: 40%;
+            top: -13%;
+            z-index: 100;
+        }
+    }
+
+}
+
+/* --- Modal ----*/
+
+.modal {
+    border-radius: 10px;
+
+    .modal-content {
+        background: #1b1c21;
+        padding: 10px;
+    }
+
+    .modal-header {
+        border: none;
+    }
+
+    .modal-title {
+        font-size: $medium-text-size;
+        line-height: 24px;
+        color: #e8e9f1;
+    }
+
+    .modal-body {
+        p {
+            color: $normal-color !important;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: justify;
+        }
+
+        .changeRate-form-group {
+            position: relative;
+
+            .form-dontrol {
+                padding-left: 5px;
+            }
+
+            span {
+                font-size: 10px;
+                line-height: 16px;
+                color: #53555c;
+                position: absolute;
+                top: 30%;
+                right: 5%;
+            }
+        }
+    }
+
+    .modal-footer {
+        border: none;
+        justify-content: flex-start;
+        padding-top: 0;
+
+        button {
+            color: #d7d8de;
+            font-size: 12px;
+            line-height: 16px;
+            border-radius: 18px;
+            width: 80px;
+            height: 36px;
+            background: transparent;
+            border: none;
+        }
+
+        .Btnprimary {
+            background: #0b9171 !important;
+        }
+    }
+}
+
+
+
+/* --- Responsive Set*/
+
+
+@media only screen and (max-width: 992px) {
+    tr {
+        height: 40px;
+    }
+
+
+}
+
+@media only screen and (max-width : 768px) {
+    tr {
+        height: 40px;
+    }
+
+    div.dataTables_wrapper {
+        margin: 0 auto;
+        padding: 0;
+        overflow-x: scroll;
+    }
+
+    .coinNamaDescription {
+        p {
+            color: #afb2be;
+            font-size: 14px;
+            font-weight: 100;
+            line-height: 24px;
+            text-align: justify;
+        }
+    }
+
+    .calculator {
+        .convertDiv {
+            #convertBtn {
+                width: 72px;
+                height: 72px;
+                left: 43%;
+                top: -10%;
+            }
+        }
+    }
+
+    .calculator .convertDiv .country-Wrapper .countryDropDown-wrapper {
+        width: 89%;
+
+    }
+
+    .calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper {
+        width: 88%;
+    }
+
+
+}
+
+@media only screen and (max-width: 425px) {
+    .calculator {
+        .convertDiv {
+            #convertBtn {
+                width: 72px;
+                height: 72px;
+                left: 38%;
+                top: -10%;
+            }
+        }
+    }
+
+    .calculator .convertDiv .country-Wrapper .countryInput-Wrapper .leftImg {
+        margin-left: 15px;
+        width: 30px;
+    }
+
+    .calculator .convertDiv .country-Wrapper .countryInput-Wrapper .rightImg {
+        margin-right: 2px;
+    }
+
+    .calculator .convertDiv .coinInput-Wrapper .leftImg {
+        margin-left: 10px;
+        width: 30px;
+    }
+
+    .calculator .convertDiv .coinInput-Wrapper .rightImg {
+        margin-right: 20px;
+    }
+
+    .calculator .convertDiv .country-Wrapper .country-Wrapper .countryDropDown-wrapper {
+        width: 80%;
+
+    }
+
+    // .calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper
+    // {
+    //     // width: 80%;
+    // }
+
+
+}
+
+@media only screen and (max-width: 375px) {
+    .calculator {
+        .convertDiv {
+            #convertBtn {
+                width: 72px;
+                height: 72px;
+                left: 36%;
+                top: -10%;
+            }
+        }
+    }
+
+    .calculator .convertDiv {
+        span {
+            font-size: 10px !important;
+        }
+    }
+
+    .calculator .convertDiv .countryInput-Wrapper .leftImg {
+        margin-left: 10px;
+        width: 20px;
+    }
+
+    .calculator .convertDiv .countryInput-Wrapper .rightImg {
+        margin-right: 2px;
+    }
+
+    .calculator .convertDiv .coinInput-Wrapper .leftImg {
+        margin-left: 5px;
+        width: 20px;
+    }
+
+    .calculator .convertDiv .coinInput-Wrapper .rightImg {
+        margin-right: 20px;
+    }
+
+    .calculator .convertDiv .country-Wrapper .countryDropDown-wrapper {
+        width: 76%;
+
+    }
+
+    .calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper {
+        width: 77%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .calculator {
+        .convertDiv {
+            #convertBtn {
+                width: 72px;
+                height: 72px;
+                left: 31%;
+                top: -10%;
+            }
+        }
+    }
+
+    .calculator .convertDiv .countryInput-Wrapper .leftImg {
+        display: none;
+
+    }
+
+
+    .calculator .convertDiv .coinInput-Wrapper .leftImg {
+        display: none;
+    }
+
+}
