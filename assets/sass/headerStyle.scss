@@ -72,6 +72,11 @@ header {
 
     .logo-container {
         flex-direction: column;
+
+        img
+        {
+            width: 200px;
+        }
     }
 
     header {
@@ -115,7 +120,7 @@ header {
         position: relative;
         width: 100px;
         top: -43px;
-        left: 50px;
+        left: 65px;
 
         label {
             display: inline-block;

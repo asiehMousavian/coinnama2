@@ -2,11 +2,6 @@ body {
   font-family: AnjomanFaNum-Regular;
 }
 
-.container {
-  line-height: 20px;
-  width: 80%;
-}
-
 .captionFigure {
   display: inline-block;
   text-align: center;
@@ -76,6 +71,7 @@ body {
 
 .report-wrapper .lightSpan {
   font-family: AnjomanFaNum-Light;
+  font-size: 16px;
 }
 
 .chart-wrapper {
@@ -87,7 +83,18 @@ body {
 .chart-wrapper .mychart {
   width: 100%;
   max-height: 600px;
-  height: 100vh;
+}
+
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+  .report-wrapper .rowHeader {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 425px) {

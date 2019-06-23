@@ -61,6 +61,9 @@ header {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .logo-container img {
+    width: 200px;
+  }
   header {
     position: relative;
   }
@@ -97,7 +100,7 @@ header {
     position: relative;
     width: 100px;
     top: -43px;
-    left: 50px;
+    left: 65px;
   }
   #page-nav label {
     display: inline-block;

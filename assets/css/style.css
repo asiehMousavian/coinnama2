@@ -97,6 +97,7 @@ h1 {
   text-transform: uppercase;
   color: #afb2be;
   text-align: left;
+  margin-left: 5px;
 }
 
 .calculator .convertDiv .lgSpan {
@@ -113,8 +114,12 @@ h1 {
   position: relative;
 }
 
+.calculator .convertDiv .country-Wrapper .countryInput-Wrapper {
+  cursor: pointer;
+}
+
 .calculator .convertDiv .country-Wrapper .countryInput-Wrapper .leftImg {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .calculator .convertDiv .country-Wrapper .countryInput-Wrapper .rightImg {
@@ -127,10 +132,10 @@ h1 {
   padding: 5px;
   direction: ltr;
   display: none;
-  z-index: 100;
+  z-index: 150;
   background: #15161a;
   margin-top: 1px;
-  height: 150px;
+  max-height: 150px;
   border-radius: 10px;
   overflow-y: scroll;
   cursor: pointer;
@@ -162,7 +167,7 @@ h1 {
 }
 
 .calculator .convertDiv .coin-Wrapper .coinInput-Wrapper .leftImg {
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 .calculator .convertDiv .coin-Wrapper .coinInput-Wrapper .rightImg {
@@ -175,10 +180,10 @@ h1 {
   padding: 5px;
   direction: ltr;
   display: none;
-  z-index: 100;
+  z-index: 150;
   background: #15161a;
   margin-top: 1px;
-  height: 150px;
+  max-height: 150px;
   border-radius: 10px;
   overflow-y: scroll;
   left: 15px;
@@ -258,6 +263,74 @@ h1 {
   right: 5%;
 }
 
+.modal .modal-body .modalcountry-wrapper span {
+  line-height: 1px;
+  text-transform: uppercase;
+  color: #afb2be;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.modal .modal-body .modalcountry-wrapper .modallgSpan {
+  font-size: 12px;
+  display: block;
+  margin-top: 10px;
+}
+
+.modal .modal-body .modalcountry-wrapper .modalsmSpan {
+  font-size: 10px;
+}
+
+.modal .modal-body .modalcountry-wrapper .modalcountryInput-Wrapper {
+  cursor: pointer;
+}
+
+.modal .modal-body .modalcountry-wrapper .modalcountryDropDown-wrapper {
+  position: absolute;
+  width: 84%;
+  padding: 5px;
+  direction: ltr;
+  display: none;
+  z-index: 150;
+  background: #15161a;
+  margin-top: 1px;
+  max-height: 150px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  cursor: pointer;
+}
+
+.modal .modal-body .modalcountry-wrapper .modalcountryDropDown-wrapper .modallistItem {
+  cursor: pointer;
+}
+
+.modal .modal-body .modalcountry-wrapper .modalcountryDropDown-wrapper .modallistItem .modalItem {
+  margin-bottom: 15px;
+}
+
+.modal .modal-body .modalcountry-wrapper .modalcountryDropDown-wrapper .modallistItem img {
+  margin-right: 10px;
+}
+
+.modal .modal-body .modalcountry-wrapper .modalcountryDropDown-wrapper .modallistItem span {
+  line-height: 1px;
+  text-transform: uppercase;
+  color: #afb2be;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.modal .modal-body .modalcountry-wrapper .modalcountryDropDown-wrapper .modallistItem .modallgSpan {
+  font-size: 12px;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal .modal-body .modalcountry-wrapper .modalcountryDropDown-wrapper .modallistItem .modalsmSpan {
+  font-size: 10px;
+}
+
 .modal .modal-footer {
   border: none;
   -webkit-box-pack: start;
@@ -305,89 +378,95 @@ h1 {
     text-align: justify;
   }
   .calculator .convertDiv #convertBtn {
-    width: 72px;
-    height: 72px;
-    left: 43%;
-    top: -10%;
+    left: 42%;
+    top: -15%;
+  }
+  .calculator .convertDiv .country-Wrapper .countryInput-Wrapper .leftImg {
+    margin-left: 22px;
   }
   .calculator .convertDiv .country-Wrapper .countryDropDown-wrapper {
     width: 89%;
   }
   .calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper {
-    width: 88%;
+    width: 91%;
   }
 }
 
 @media only screen and (max-width: 425px) {
   .calculator .convertDiv #convertBtn {
-    width: 72px;
-    height: 72px;
-    left: 38%;
-    top: -10%;
+    position: static;
+    margin-right: 140px;
   }
   .calculator .convertDiv .country-Wrapper .countryInput-Wrapper .leftImg {
-    margin-left: 15px;
-    width: 30px;
+    margin-left: 5px;
   }
-  .calculator .convertDiv .country-Wrapper .countryInput-Wrapper .rightImg {
-    margin-right: 2px;
+  .calculator .convertDiv .coin-Wrapper .coinInput-Wrapper .leftImg {
+    margin-left: 5px;
   }
-  .calculator .convertDiv .coinInput-Wrapper .leftImg {
-    margin-left: 10px;
-    width: 30px;
-  }
-  .calculator .convertDiv .coinInput-Wrapper .rightImg {
-    margin-right: 20px;
+  .calculator .convertDiv .coin-Wrapper .coinInput-Wrapper .rightImg {
+    margin-right: 15px;
   }
   .calculator .convertDiv .country-Wrapper .country-Wrapper .countryDropDown-wrapper {
-    width: 80%;
+    width: 92%;
+  }
+  .modal .modal-body .modalcountry-wrapper {
+    margin-bottom: 10px;
+  }
+  .modal .modal-body .modalcountry-wrapper .modalcountryDropDown-wrapper {
+    width: 92%;
   }
 }
 
 @media only screen and (max-width: 375px) {
   .calculator .convertDiv #convertBtn {
-    width: 72px;
-    height: 72px;
-    left: 36%;
-    top: -10%;
-  }
-  .calculator .convertDiv span {
-    font-size: 10px !important;
+    position: static;
+    margin-right: 120px;
   }
   .calculator .convertDiv .countryInput-Wrapper .leftImg {
-    margin-left: 10px;
-    width: 20px;
-  }
-  .calculator .convertDiv .countryInput-Wrapper .rightImg {
-    margin-right: 2px;
+    margin-left: 5px;
   }
   .calculator .convertDiv .coinInput-Wrapper .leftImg {
     margin-left: 5px;
-    width: 20px;
   }
-  .calculator .convertDiv .coinInput-Wrapper .rightImg {
-    margin-right: 20px;
+  .calculator .convertDiv .coin-Wrapper .coinInput-Wrapper .rightImg {
+    margin-right: 15px;
   }
   .calculator .convertDiv .country-Wrapper .countryDropDown-wrapper {
-    width: 76%;
+    width: 90%;
   }
   .calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper {
-    width: 77%;
+    width: 90%;
+  }
+  .modal .modal-body .modalcountry-wrapper .modalcountryDropDown-wrapper {
+    width: 91%;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .calculator .convertDiv #convertBtn {
-    width: 72px;
-    height: 72px;
-    left: 31%;
-    top: -10%;
+    position: static;
+    margin-right: 90px;
   }
-  .calculator .convertDiv .countryInput-Wrapper .leftImg {
-    display: none;
+  .calculator .convertDiv .coin-Wrapper .coinInput-Wrapper .leftImg {
+    margin-left: 5px;
   }
-  .calculator .convertDiv .coinInput-Wrapper .leftImg {
-    display: none;
+  .calculator .convertDiv .coin-Wrapper .coinInput-Wrapper .rightImg {
+    margin-right: 10px;
+  }
+  .calculator .convertDiv .country-Wrapper .countryDropDown-wrapper {
+    width: 88%;
+  }
+  .calculator .convertDiv .country-Wrapper .countryInput-Wrapper .rightImg {
+    margin-right: 10px;
+  }
+  .calculator .convertDiv .coin-Wrapper .coinDropDown-wrapper {
+    width: 88%;
+  }
+  .modal .modal-body .modalcountry-wrapper .modalcountryDropDown-wrapper {
+    width: 89%;
+  }
+  .cal-form-group .form-control {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

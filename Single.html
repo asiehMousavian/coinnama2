@@ -18,34 +18,45 @@
         <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
         <link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
         <link rel="stylesheet" type="text/css" href="assets/css/singleStyle.css">
-    
+
+        <script type="text/javascript" src="/assets/js/Chart.min.js" ></script>
+        <!-- <script type="text/javascript" src="/assets/js/utils.js" ></script> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> -->
         <!--Chart Config-->
-        <script src="assets/js/amcharts.js" type="text/javascript"></script>
-        <script src="assets/js/serial.js" type="text/javascript"></script>
+      
        
     </head>
 
-    <body>
-
-            <header id="header">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
-                            <div class=""><img src="assets/images/logo-copy.png" alt=""></div>
-                            <div class="title ml-auto">مرجع اطلاع رسانی رمز ارزها</div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
-                          <div class="d-flex">
-                              <div class="costLabel">قیمت دلار سنا 19 اردیبهشت</div>
-                              <div class="costDetail">14600 تومان <a href="" class="warningLabel" style="font-size: 12px">«تغییر»</a></div>
-                          </div>
-               
-                            <div class=""><a class="header-nav" href="">تماس با ما</a></div>
-                            <div class=""><a class="header-nav" href="">API</a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </header>
+    <body">
+      <header id="header">
+        <div class="container">
+          <div class="row">
+            <div class="logo-container col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
+              <div><img src="assets/images/logo-copy.png" alt=""></div>
+              <div class="title ml-auto">مرجع اطلاع رسانی رمز ارزها</div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
+              <div class="col-xl-8 col-lg-8 col-md-8 col-sm-10 col-12 d-flex">
+                <div class="costLabel">قیمت دلار سنا 19 اردیبهشت</div>
+                <div class="costDetail">14600 تومان <a href="" class="warningLabel" style="font-size: 12px">«تغییر»</a>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-2 col-2">
+                <nav id="page-nav" class="" role="navigation">
+                  <label for="hamburger">&#9776;</label>
+                  <input type="checkbox" id="hamburger" />
+                  <ul class="d-flex justify-content-between">
+                    <li class="ml-auto"><a class="header-nav" href="">تماس با ما</a></li>
+                    <li class="mr-auto"><a class="header-nav" href="">API</a></li>
+                  </ul>
+                </nav>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </header>
               
                   <div id="main" role="main">
                       <div class="mainarea">
@@ -86,9 +97,7 @@
                               </div>
                           </div>
                           <div class="col-8 offset-2 chart-wrapper">
-                              <div id="chartdiv" class="mychart">
-                                
-                              </div>
+                                  <canvas id="chartdiv" class="mychart"></canvas>
                           </div>
               
                           </div>
@@ -98,8 +107,86 @@
                       </div>
                   </div>
 
+
+
         <script type="text/javascript" src="assets/js/jquery.js"></script>
-  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <script>
+            // function displayLineChart() {
+            //  var buyerData = {
+            //      labels : ["همه","6 ماه ","3 ماه ","این ماه","این هفته","امروز"],
+            //      datasets : [
+            //      {
+            //     fillColor: "rgba(220,220,220,0.1)",
+            //     strokeColor: "linear-gradient(to left, red,orange,yellow,green,blue,indigo,violet)",
+                
+            //     pointBackgroundColor:"#fff",
+            //     pointColor: "#fff",
+            //     pointBorderColor:"#fff",
+            //     pointBorderWidth:5,
+
+
+            //     pointStrokeColor: "#111",
+            //     pointHighlightFill: "#000",
+            //     pointHighlightStroke: "rgba(220,220,220,1)",
+            //     data: [9, 7, 25, 7, 11, 13, 17, 10]
+            //      }
+            //  ]
+            //  }
+            //  var buyers = document.getElementById('chartdiv').getContext('2d');
+            //  new Chart(buyers).Line(buyerData);
+            // }
+
+
+
+            var config = {
+		type: 'line',
+		data: {
+			
+      labels : ["همه","6 ماه ","3 ماه ","این ماه","این هفته","امروز"],
+
+			datasets: [{
+				label: '',
+				backgroundColor: '#f5f',
+        borderColor: 'linear-gradient(to left, #a34dd0,#5b4fc0,#4b99f0,#47d1de,#42ce9a)',
+        borderWidth: 5,
+				// borderColor: 'linear-gradient(to left, red,orange,yellow,green,blue,indigo,violet)',
+				fill: false,
+				data: [9, 7, 25, 7, 11, 13, 17, 10]
+			}]
+		},
+		options: {
+
+     
+
+
+			responsive: false,
+			title: {
+				display: false,
+				text: ''
+			},
+			scales: {
+				xAxes: [{
+					display: true,
+				}],
+				yAxes: [{
+					display: false,
+					type: 'logarithmic',
+				}]
+			}
+		}
+	};
+
+	window.onload = function() {
+    // displayLineChart();
+		var ctx = document.getElementById('chartdiv').getContext('2d');
+		window.myLine = new Chart(ctx, config);
+	};
+
+         </script>
+
+
+ 
     </body>
 
 </html>

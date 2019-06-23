@@ -15,8 +15,6 @@
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.rtl.css">
   <link rel="stylesheet" type="text/css" href="assets/css/datatables.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
-
-
   <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
   <link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
   <link rel="stylesheet" type="text/css" href="assets/css/dataTableStyle.css">
@@ -29,27 +27,25 @@
     <div class="container">
       <div class="row">
         <div class="logo-container col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
-          <div class=""><img src="assets/images/logo-copy.png" alt=""></div>
+          <div><img src="assets/images/logo-copy.png" alt=""></div>
           <div class="title ml-auto">مرجع اطلاع رسانی رمز ارزها</div>
+        </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
-          <div class="row">
           <div class="col-xl-8 col-lg-8 col-md-8 col-sm-10 col-12 d-flex">
             <div class="costLabel">قیمت دلار سنا 19 اردیبهشت</div>
             <div class="costDetail">14600 تومان <a href="" class="warningLabel" style="font-size: 12px">«تغییر»</a>
             </div>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-4 col-sm-2 col-2">
-          <nav id="page-nav" class="" role="navigation">
+            <nav id="page-nav" class="" role="navigation">
               <label for="hamburger">&#9776;</label>
-              <input type="checkbox" id="hamburger"/>
-            <ul class="d-flex justify-content-between">
-              <li class="ml-auto"><a class="header-nav" href="">تماس با ما</a></li>
-              <li class="mr-auto"><a class="header-nav" href="">API</a></li>
-            </ul>
-          </nav>
-        </div>
-     
-
+              <input type="checkbox" id="hamburger" />
+              <ul class="d-flex justify-content-between">
+                <li class="ml-auto"><a class="header-nav" href="">تماس با ما</a></li>
+                <li class="mr-auto"><a class="header-nav" href="">API</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
@@ -185,8 +181,6 @@
             </tbody>
           </table>
 
-
-       
         <!-- third Part -->
 
         <div class="row">
@@ -204,27 +198,25 @@
             </p>
             <button class="btn btn-lg">مستندات فنی API</button>
           </div>
-
           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 calculator">
             <h1>ماشین حساب</h1>
             <form action="">
-
               <div class="form-group cal-form-group">
                 <img src="assets/images/calculating.png" alt="" class="calInput">
                 <input type="text" class="form-control" id="" value="3,500">
               </div>
-
               <div class="convertDiv form-group row d-flex">
-
-                <div class="country-Wrapper col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                <div class="country-Wrapper col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
                   <div class="countryInput-Wrapper form-control d-flex justify-content-between">
-                      <div class="mr-auto"> 
+                    <div class="mr-auto d-flex">
+                        <div class=""> 
+                            <span id='lgSpan' class="lgSpan">USD</span>
+                            <span id='smSpan' class="smSpan">us dollar</span>
+                        </div>
+                      <div class=""> 
                           <img id="contryImg" src="assets/images/usa.png" alt="" class="leftImg">
                       </div>
-                      <div class="mr-auto"> 
-                          <span id='lgSpan' class="lgSpan">USD</span>
-                          <span id='smSpan' class="smSpan">us dollar</span>
-                        </div>
+                    </div>
                         <div class="ml-auto flex-shrink-1">
                             <img src="/assets/images/arrow-down.png" alt="" class="rightImg">
                         </div>
@@ -280,25 +272,22 @@
 
                   </div>
                 </div>
-
                 <button type="button" id="convertBtn"></button>
-
-                <div class="coin-Wrapper col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-
-                    <div class="coinInput-Wrapper form-control d-flex justify-content-between">
-
-                        <div class="mr-auto"> 
+                <div class="coin-Wrapper col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="coinInput-Wrapper form-control d-flex justify-content-between ">
+                      <div class="mr-auto d-flex">
+                          <div class=""> 
+                              <span id="lgSpan" class="lgSpan">btc</span>
+                              <span id="smSpan" class="smSpan">bitcoin</span>
+                            </div>
+                        <div class=""> 
                             <img  id="coinImg" src="assets/images/btCoin.png" alt="" class="leftImg">
                         </div>
-                        <div class="mr-auto"> 
-                            <span id="lgSpan" class="lgSpan">btc</span>
-                            <span id="smSpan" class="smSpan">bitcoin</span>
-                          </div>
+                        </div>
                           <div class="ml-auto">
                               <img   src="/assets/images/arrow-down.png" alt="" class="rightImg">
                           </div>
                     </div>
-
                     <div class="coinDropDown-wrapper">
 
                       <div class="listItem">
@@ -352,9 +341,6 @@
                     
 
                   </div>
-
-
-
                 </div>
               </div>
               
@@ -363,11 +349,8 @@
                 <input type="text" class="form-control result" id="" value="300,000,000$">
               </div>
             </form>
-
           </div>
-
         </div>
-
       </div>
     </div>
   </div>
@@ -382,17 +365,53 @@
         <div class="modal-body">
           <p>با تغییر ارز پایه تاثیرات جانبی که در اپلیکیشن ایجاد می‌شود را در یک پاراگراف توضیح دهید</p>
           <div class="row">
-            <div class="col-4">
-              <div class="form-group">
-                <input class="form-control" type="text">
+            <div class="modalcountry-wrapper col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+              <div class="modalcountryInput-Wrapper form-control d-flex justify-content-between">
+                <div class="mr-auto d-flex">
+                    <div class="">
+                        <span id='modallgSpan' class="modallgSpan">USD</span>
+                        <span id='modalsmSpan' class="modalsmSpan">us dollar</span>
+                    </div>
+                  <div class=""> 
+                      <img id="modalcontryImg" src="assets/images/usa.png" alt="" class="leftImg">
+                  </div>
+                </div>
+                    <div class="ml-auto flex-shrink-1">
+                        <img src="/assets/images/arrow-down.png" alt="" class="rightImg">
+                    </div>
               </div>
+              <div class="modalcountryDropDown-wrapper">
+                  <div class="modallistItem">
+                        <div class="d-flex modalItem">
+                          <div class="mr-auto"> 
+                              <span class="modallgSpan">test1</span>
+                              <span class="modalsmSpan">test1-1</span>
+                          </div>
+                          <div class=""> 
+                              <img src="assets/images/btCoin.png" alt="" class="">
+                          </div>
+                        </div>
+                        <div class="d-flex modalItem">
+                            <div class="mr-auto"> 
+                                <span class="modallgSpan">test1</span>
+                                <span class="modalsmSpan">test1-1</span>
+                            </div>
+                            <div class=""> 
+                                <img src="assets/images/btCoin.png" alt="" class="">
+                            </div>
+                          </div>
+                      
+                  </div>
+
+              </div>
+
+              
             </div>
-            <div class="col-8" >
+            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12" >
                 <div class="form-group changeRate-form-group">
                     <input class="form-control" type="text" value="14,600">
                     <span class="">نرخ پایه :</span>
                 </div>
-
             </div>
           </div>
         </div>
@@ -441,7 +460,16 @@
         $(this).find('img').toggle();
       });
 
-      $('.countryInput-Wrapper').on('click', function () {
+      $(document).click(function () {
+        $(".countryDropDown-wrapper").hide();
+        $('.coinDropDown-wrapper').hide();
+        $('.modalcountryDropDown-wrapper').hide();
+
+
+      });
+
+      $('.countryInput-Wrapper').on('click', function (e) {
+        e.stopPropagation();
         $('.countryDropDown-wrapper').toggle();
 
       });
@@ -457,8 +485,10 @@
         $('.countryDropDown-wrapper').toggle();
       });
 
-      $('.coinInput-Wrapper').on('click', function () {
+      $('.coinInput-Wrapper').on('click', function (e) {
+        e.stopPropagation();
         $('.coinDropDown-wrapper').toggle();
+
       });
 
       $('.coinDropDown-wrapper .listItem').on('click', function () {
@@ -471,63 +501,24 @@
         $('.coinInput-Wrapper #smSpan').text(span2);
         $('.coinDropDown-wrapper').toggle();
       });
-//       $('.md-select').on('click', function(){
-//   $('.md-select').toggleClass('active')
-// })
-
-// $('.md-select ul li').on('click', function() {
-//   var v = $(this).text();
-//   $('.md-select ul li').not($(this)).removeClass('active');
-//   $(this).addClass('active');
-//   // $('.md-select label button').text(v)
-//   $('.coinInput-Wrapper input').val(v);
-// })
 
 
-      // $("#leftSelect").select2({
-      //   // theme: "default",
-      //   // dir: "rtl",
-      //   // minimumResultsForSearch: -1,
-      //   // language: "fa"
-      // });
-   
-      // $('#datatable1').dataTable({
-      //   "bPaginate": true,
-      //   "bLengthChange": false,
-      //   "bFilter": false,
-      //   "bSort": true,
-      //   "bInfo": false,
-      //   "bAutoWidth": true,
-      //   "columnDefs": [{ "orderable": false, "targets": [0, 1, 5] }]
+//modal dropDown
 
-      //   // scrollX: true,
-      //   //   scrollCollapse: true,
-      //   //    fixedColumns: { leftColumns: 2 }
-      // });
+      $('.modalcountryInput-Wrapper').on('click', function (e) {
+        e.stopPropagation();
+        $('.modalcountryDropDown-wrapper').toggle();
+      });
 
-    // $(window).resize(function () {
-
-    //   if ($(window).width() <= 768) {
-    //     $('#datatable').dataTable({
-    //       "bDestroy": true
-    //     }).fnDestroy();
-    //     $('#datatable').dataTable({
-    //       "bPaginate": true,
-    //       "bLengthChange": false,
-    //       "bFilter": false,
-    //       "bSort": true,
-    //       "bInfo": false,
-    //       "bAutoWidth": true,
-    //       "columnDefs": [{ "orderable": false, "targets": [0, 1, 5] }],
-    //       scrollX: true,
-    //       scrollCollapse: true,
-    //       fixedColumns: { leftColumns: 2 }
-
-    //     });
-
-    //   }
-    // });
-
+      $('.modalcountryDropDown-wrapper .modallistItem .modalItem').on('click', function () {
+        var imgSrc = $(this).find('img').attr('src');
+        var span1 = $(this).find('.modallgSpan').text();
+        var span2 = $(this).find('.modalsmSpan').text();
+        $('#modalcontryImg').attr('src', imgSrc);
+        $('.modalcountryInput-Wrapper #modallgSpan').text(span1);
+        $('.modalcountryInput-Wrapper #modalsmSpan').text(span2);
+        $('.modalcountryDropDown-wrapper').toggle();
+      });
   });
 
   </script>
