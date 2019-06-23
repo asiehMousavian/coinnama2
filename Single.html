@@ -137,51 +137,137 @@
             //  new Chart(buyers).Line(buyerData);
             // }
 
+           
 
-
-            var config = {
-		type: 'line',
-		data: {
+//----------------2
+  //           var config = {
+	// 	type: 'line',
+	// 	data: {
 			
-      labels : ["همه","6 ماه ","3 ماه ","این ماه","این هفته","امروز"],
+  //     labels : ["همه","6 ماه ","3 ماه ","این ماه","این هفته","امروز"],
 
-			datasets: [{
-				label: '',
-				backgroundColor: '#f5f',
-        borderColor: 'linear-gradient(to left, #a34dd0,#5b4fc0,#4b99f0,#47d1de,#42ce9a)',
-        borderWidth: 5,
-				// borderColor: 'linear-gradient(to left, red,orange,yellow,green,blue,indigo,violet)',
-				fill: false,
-				data: [9, 7, 25, 7, 11, 13, 17, 10]
-			}]
-		},
-		options: {
+	// 		datasets: [{
+	// 			label: '',
+	// 			backgroundColor: '#f5f',
+  //       borderColor: 'linear-gradient(to left, #a34dd0,#5b4fc0,#4b99f0,#47d1de,#42ce9a)',
+  //       borderWidth: 5,
+	// 			// borderColor: 'linear-gradient(to left, red,orange,yellow,green,blue,indigo,violet)',
+	// 			fill: false,
+	// 			data: [9, 7, 25, 7, 11, 13, 17, 10]
+	// 		}]
+	// 	},
+	// 	options: {
 
      
 
 
-			responsive: false,
-			title: {
-				display: false,
-				text: ''
-			},
-			scales: {
-				xAxes: [{
-					display: true,
-				}],
-				yAxes: [{
-					display: false,
-					type: 'logarithmic',
-				}]
-			}
-		}
-	};
+	// 		responsive: false,
+	// 		title: {
+	// 			display: false,
+	// 			text: ''
+	// 		},
+	// 		scales: {
+	// 			xAxes: [{
+	// 				display: true,
+	// 			}],
+	// 			yAxes: [{
+	// 				display: false,
+	// 				type: 'logarithmic',
+	// 			}]
+	// 		}
+	// 	}
+	// };
 
-	window.onload = function() {
-    // displayLineChart();
-		var ctx = document.getElementById('chartdiv').getContext('2d');
-		window.myLine = new Chart(ctx, config);
-	};
+	// window.onload = function() {
+  //   // displayLineChart();
+	// 	var ctx = document.getElementById('chartdiv').getContext('2d');
+	// 	window.myLine = new Chart(ctx, config);
+	// };
+
+
+
+  //-------3
+  var chart    = document.getElementById('chartdiv').getContext('2d'),
+    gradient = chart.createLinearGradient(0, 0, 0, 350);
+
+gradient.addColorStop(0.8, '#a34dd0');
+gradient.addColorStop(0.7, '#5b4fc0');
+gradient.addColorStop(0.3, '#4b99f0');
+gradient.addColorStop(0.4, '#47d1de');
+gradient.addColorStop(0.5, '#42ce9a');
+
+
+
+var data  = {
+
+    labels : ["همه","6 ماه ","3 ماه ","این ماه","این هفته","امروز"],
+
+    datasets: [{
+			label: '',
+			// backgroundColor: gradient,
+			pointBackgroundColor: 'white',
+			borderWidth: 5,
+			borderColor: gradient,
+			data: [50, 55, 80, 81, 54, 50]
+    }]
+};
+
+
+var options = {
+	responsive: true,
+	maintainAspectRatio: true,
+	animation: {
+		easing: 'easeInOutQuad',
+		duration: 520
+	},
+	scales: {
+		xAxes: [{
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.05)',
+				lineWidth: 1
+			}
+		}],
+		yAxes: [{
+			gridLines: {
+				color: 'rgba(200, 200, 200, 0.08)',
+				lineWidth: 1
+			}
+		}]
+	},
+	elements: {
+		line: {
+			tension: 0.4
+		}
+	},
+	legend: {
+		display: false
+	},
+	point: {
+		backgroundColor: '#1b1c21',
+    borderWidth:5,
+    borderColor:'#dcdde3'
+	},
+	tooltips: {
+		titleFontFamily: 'AnjomanFaNum-Regular',
+		backgroundColor: 'rgba(0,0,0,0.3)',
+		titleFontColor: 'red',
+		caretSize: 5,
+		cornerRadius: 2,
+		xPadding: 10,
+		yPadding: 10
+	},
+  scales: {
+        yAxes: [{ticks: {fontSize: 0, fontFamily: "AnjomanFaNum-Regular", fontColor: '#000', fontStyle: '500'}}],
+        xAxes: [{ticks: {fontSize: 16, fontFamily: "AnjomanFaNum-Regular", fontColor: '#5a5c6b', fontStyle: '500'}}]
+        }
+};
+
+
+var chartInstance = new Chart(chart, {
+    type: 'line',
+    data: data,
+		options: options
+});
 
          </script>
 
