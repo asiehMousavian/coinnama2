@@ -6,7 +6,6 @@ header {
 .title {
   color: #5a5c6b;
   font-size: 16px;
-  text-align: center;
   margin-right: 10px;
 }
 
@@ -43,7 +42,62 @@ header {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
+  .logo-container {
+    margin-bottom: 10px;
+  }
+  #page-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #page-nav label {
+    display: inline-block;
+    color: #85889e;
+    font-size: 30px;
+    margin-right: auto;
+  }
+  #page-nav .small_menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    z-index: 1500;
+    background: #000;
+    width: 250px;
+    height: 100%;
+    padding: 40px 20px 20px 20px;
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+  }
+  #page-nav .small_menu .close_menu {
+    display: block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 100;
+  }
+  #page-nav .small_menu ul {
+    -webkit-box-pack: inherit !important;
+        -ms-flex-pack: inherit !important;
+            justify-content: inherit !important;
+    display: block !important;
+  }
+  #page-nav .small_menu ul li a {
+    display: block;
+    border-bottom: solid 1px #6c757d;
+    padding: 5px 0;
+  }
+  #page-nav .small_menu ul li a:hover {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .title,
   .costLabel {
     font-size: 14px;
@@ -67,23 +121,6 @@ header {
   header {
     position: relative;
   }
-  #page-nav {
-    position: absolute;
-    width: 100px;
-    top: -43px;
-    left: 10px;
-  }
-  #page-nav label {
-    display: inline-block;
-    color: #85889e;
-    font-size: 30px;
-  }
-  #page-nav ul {
-    display: none !important;
-  }
-  #page-nav input:checked ~ ul {
-    display: block !important;
-  }
 }
 
 @media screen and (max-width: 375px) {
@@ -96,22 +133,11 @@ header {
   header {
     position: relative;
   }
-  #page-nav {
-    position: relative;
-    width: 100px;
-    top: -43px;
-    left: 65px;
-  }
-  #page-nav label {
-    display: inline-block;
-    color: #85889e;
-    font-size: 30px;
-  }
-  #page-nav ul {
-    display: none !important;
-  }
-  #page-nav input:checked ~ ul {
-    display: block !important;
+}
+
+@media screen and (max-width: 360px) {
+  .title, .costLabel {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=headerStyle.css.map */

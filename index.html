@@ -26,25 +26,36 @@
   <header id="header">
     <div class="container">
       <div class="row">
-        <div class="logo-container col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
-          <div><img src="assets/images/logo-copy.png" alt=""></div>
-          <div class="title ml-auto">مرجع اطلاع رسانی رمز ارزها</div>
-        </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-between">
-          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-10 col-12 d-flex">
-            <div class="costLabel">قیمت دلار سنا 19 اردیبهشت</div>
-            <div class="costDetail">14600 تومان <a href="" class="warningLabel" style="font-size: 12px">«تغییر»</a>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="d-flex align-items-center logo-container">
+                <img src="assets/images/logo-copy.png" alt="">
+                <div class="title">مرجع اطلاع رسانی رمز ارزها</div>
             </div>
-          </div>
-          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-2 col-2">
-            <nav id="page-nav" class="" role="navigation">
-              <label for="hamburger">&#9776;</label>
-              <input type="checkbox" id="hamburger" />
-              <ul class="d-flex justify-content-between">
-                <li class="ml-auto"><a class="header-nav" href="">تماس با ما</a></li>
-                <li class="mr-auto"><a class="header-nav" href="">API</a></li>
-              </ul>
-            </nav>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+          <div class="row">
+              <div class="col-xl-8 col-lg-8 col-md-8 col-sm-10 col-10">
+                <div class="d-flex">
+                    <div class="costLabel">قیمت دلار سنا 19 اردیبهشت</div>
+                    <div class="costDetail">14600 تومان <a href="" class="warningLabel" style="font-size: 12px">«تغییر»</a>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-2 col-2">
+                <nav id="page-nav" class="" role="navigation">
+                  <label id="hamburger">&#9776;</label>
+                  <!-- <input type="checkbox" id="hamburger" /> -->
+                  <div class="small_menu">
+                    <ul class="d-flex justify-content-between">
+                      <li class="ml-auto"><a class="header-nav" href="">تماس با ما</a></li>
+                      <li class="mr-auto"><a class="header-nav" href="">API</a></li>
+                    </ul>
+                    <a href="javascript:void(0)" class="close_menu">
+                      <img src="assets/images/cancel.png" alt="">
+                    </a>
+                  </div>
+                </nav>
+              </div>
           </div>
         </div>
       </div>
@@ -285,7 +296,7 @@
                         </div>
                         </div>
                           <div class="ml-auto">
-                              <img   src="/assets/images/arrow-down.png" alt="" class="rightImg">
+                              <img   src="assets/images/arrow-down.png" alt="" class="rightImg">
                           </div>
                     </div>
                     <div class="coinDropDown-wrapper">
@@ -377,7 +388,7 @@
                   </div>
                 </div>
                     <div class="ml-auto flex-shrink-1">
-                        <img src="/assets/images/arrow-down.png" alt="" class="rightImg">
+                        <img src="assets/images/arrow-down.png" alt="" class="rightImg">
                     </div>
               </div>
               <div class="modalcountryDropDown-wrapper">
@@ -431,95 +442,9 @@
   <script type="text/javascript" src="assets/js/select2.js"></script>
   <script type="text/javascript" src="assets/js/dataTables.fixedColumns.min.js"></script>
 
-  <script type="text/javascript">
+  <script type="text/javascript" src="assets/js/coin.js">
 
-    $(document).ready(function () {
-      
-      $('#convertBtn').click(function () {
-        $('#convertModal').modal('show');
-      });
-
-      $('#datatable').DataTable({
-        //scrollY:        400,
-        "bInfo": false,
-        "bLengthChange": false,
-        "bFilter": false,
-        "columnDefs": [{ "orderable": false, "targets": [0, 1, 5] }],
-        scrollX: true,
-        fixedColumns: true,
-        fixedHeader: true,
-        fixedColumns: {
-          leftColumns: 1,
-          leftColumns: 2
-        }
-      });
-
-      $(window).resize(function () { location.reload(); });
-
-      $('.myTable tr th').click(function () {
-        $(this).find('img').toggle();
-      });
-
-      $(document).click(function () {
-        $(".countryDropDown-wrapper").hide();
-        $('.coinDropDown-wrapper').hide();
-        $('.modalcountryDropDown-wrapper').hide();
-
-
-      });
-
-      $('.countryInput-Wrapper').on('click', function (e) {
-        e.stopPropagation();
-        $('.countryDropDown-wrapper').toggle();
-
-      });
-
-      $('.countryDropDown-wrapper .listItem').on('click', function () {
-
-        var imgSrc = $(this).find('img').attr('src');
-        var span1 = $(this).find('.lgSpan').text();
-        var span2 = $(this).find('.smSpan').text();
-        $('#contryImg').attr('src', imgSrc);
-        $('.countryInput-Wrapper #lgSpan').text(span1);
-        $('.countryInput-Wrapper #smSpan').text(span2);
-        $('.countryDropDown-wrapper').toggle();
-      });
-
-      $('.coinInput-Wrapper').on('click', function (e) {
-        e.stopPropagation();
-        $('.coinDropDown-wrapper').toggle();
-
-      });
-
-      $('.coinDropDown-wrapper .listItem').on('click', function () {
-
-        var imgSrc = $(this).find('img').attr('src');
-        var span1 = $(this).find('.lgSpan').text();
-        var span2 = $(this).find('.smSpan').text();
-        $('#coinImg').attr('src', imgSrc);
-        $('.coinInput-Wrapper #lgSpan').text(span1);
-        $('.coinInput-Wrapper #smSpan').text(span2);
-        $('.coinDropDown-wrapper').toggle();
-      });
-
-
-//modal dropDown
-
-      $('.modalcountryInput-Wrapper').on('click', function (e) {
-        e.stopPropagation();
-        $('.modalcountryDropDown-wrapper').toggle();
-      });
-
-      $('.modalcountryDropDown-wrapper .modallistItem .modalItem').on('click', function () {
-        var imgSrc = $(this).find('img').attr('src');
-        var span1 = $(this).find('.modallgSpan').text();
-        var span2 = $(this).find('.modalsmSpan').text();
-        $('#modalcontryImg').attr('src', imgSrc);
-        $('.modalcountryInput-Wrapper #modallgSpan').text(span1);
-        $('.modalcountryInput-Wrapper #modalsmSpan').text(span2);
-        $('.modalcountryDropDown-wrapper').toggle();
-      });
-  });
+    
 
   </script>
   <!-- JS Files -->
