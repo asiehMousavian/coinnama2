@@ -51,6 +51,10 @@ header {
 #hamburger {
     display: none;
 }
+.close_menu
+{
+    display: none;
+}
 
 @media screen and (max-width:991px){
     .logo-container{
@@ -79,7 +83,7 @@ header {
             -o-transition: all ease-in-out 0.3s;
             transition: all ease-in-out 0.3s;
             .close_menu{
-                display: block;
+                display: flex;
                 width:25px;
                 height: 25px;
                 line-height: 25px;
@@ -89,6 +93,8 @@ header {
                 left: 10px;
                 top: 10px;
                 z-index: 100;
+                align-items: center;
+                justify-content: center;
             }
             ul{
                 justify-content: inherit !important;
