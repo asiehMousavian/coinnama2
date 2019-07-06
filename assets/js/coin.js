@@ -5,8 +5,9 @@ $(document).ready(function () {
     $('.close_menu').click(function(){
       $(this).parent().css('left','-250px');
     });
-    $('#convertBtn').click(function () {
-      $('#convertModal').modal('show');
+    $('#changeLabel').click(function () {
+    $('#convertModal').modal('show');
+    return false;
     });
 
     $('#datatable').DataTable({

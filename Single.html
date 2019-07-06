@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
   <link rel="stylesheet" type="text/css" href="assets/css/singleStyle.css">
 
-  <script type="text/javascript" src="/assets/js/Chart.min.js"></script>
+  <script type="text/javascript" src="assets/js/Chart.min.js"></script>
   <!-- <script type="text/javascript" src="/assets/js/utils.js" ></script> -->
 
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> -->
@@ -135,81 +135,7 @@
       });
     });
 
-    // function displayLineChart() {
-    //  var buyerData = {
-    //      labels : ["همه","6 ماه ","3 ماه ","این ماه","این هفته","امروز"],
-    //      datasets : [
-    //      {
-    //     fillColor: "rgba(220,220,220,0.1)",
-    //     strokeColor: "linear-gradient(to left, red,orange,yellow,green,blue,indigo,violet)",
 
-    //     pointBackgroundColor:"#fff",
-    //     pointColor: "#fff",
-    //     pointBorderColor:"#fff",
-    //     pointBorderWidth:5,
-
-
-    //     pointStrokeColor: "#111",
-    //     pointHighlightFill: "#000",
-    //     pointHighlightStroke: "rgba(220,220,220,1)",
-    //     data: [9, 7, 25, 7, 11, 13, 17, 10]
-    //      }
-    //  ]
-    //  }
-    //  var buyers = document.getElementById('chartdiv').getContext('2d');
-    //  new Chart(buyers).Line(buyerData);
-    // }
-
-
-
-    //----------------2
-    //           var config = {
-    // 	type: 'line',
-    // 	data: {
-
-    //     labels : ["همه","6 ماه ","3 ماه ","این ماه","این هفته","امروز"],
-
-    // 		datasets: [{
-    // 			label: '',
-    // 			backgroundColor: '#f5f',
-    //       borderColor: 'linear-gradient(to left, #a34dd0,#5b4fc0,#4b99f0,#47d1de,#42ce9a)',
-    //       borderWidth: 5,
-    // 			// borderColor: 'linear-gradient(to left, red,orange,yellow,green,blue,indigo,violet)',
-    // 			fill: false,
-    // 			data: [9, 7, 25, 7, 11, 13, 17, 10]
-    // 		}]
-    // 	},
-    // 	options: {
-
-
-
-
-    // 		responsive: false,
-    // 		title: {
-    // 			display: false,
-    // 			text: ''
-    // 		},
-    // 		scales: {
-    // 			xAxes: [{
-    // 				display: true,
-    // 			}],
-    // 			yAxes: [{
-    // 				display: false,
-    // 				type: 'logarithmic',
-    // 			}]
-    // 		}
-    // 	}
-    // };
-
-    // window.onload = function() {
-    //   // displayLineChart();
-    // 	var ctx = document.getElementById('chartdiv').getContext('2d');
-    // 	window.myLine = new Chart(ctx, config);
-    // };
-
-
-
-    //-------3
     var chart = document.getElementById('chartdiv').getContext('2d'),
       gradient = chart.createLinearGradient(0, 0, 0, 350);
 
@@ -260,8 +186,8 @@
       },
       legend: {
         display: false
-        // labels : {
-        //   fontColor : '#ff5544'  
+        //  labels : {
+        //   fontColor : '#ffffff'  
         // }
       },
       point: {
