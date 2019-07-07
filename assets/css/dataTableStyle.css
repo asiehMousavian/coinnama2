@@ -124,7 +124,7 @@ div.dataTables_wrapper {
   display: flex;
   align-items: center;
   padding: 5px 8px;
-  content: "╪╡┘ü╪¡┘ç ╪¿╪╣╪»";
+  content: "صفحه قبل";
   font-size: 8px;
   line-height: 10px;
 }
@@ -137,7 +137,6 @@ div.dataTables_wrapper {
   background: #383e5c !important;
   font-size: 0;
   line-height: 10px;
-  /* padding: 0 5px; */
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.previous::before,
@@ -145,7 +144,7 @@ div.dataTables_wrapper {
   display: flex;
   align-items: center;
   padding: 5px 8px;
-  content: "╪╡┘ü╪¡┘ç ┘é╪¿┘ä";
+  content: "صفحه بعد";
   font-size: 8px;
   line-height: 10px;
 }
@@ -155,4 +154,14 @@ div.dataTables_wrapper {
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
   color: #747576 !important;
   background: #323337 !important;
+}
+
+.chart-container {
+  width: 92px;
+  height: 20px;
+  margin: 0 auto;
+}
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
 }

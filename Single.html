@@ -21,10 +21,6 @@
   <link rel="stylesheet" type="text/css" href="assets/css/singleStyle.css">
 
   <script type="text/javascript" src="assets/js/Chart.min.js"></script>
-  <!-- <script type="text/javascript" src="/assets/js/utils.js" ></script> -->
-
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> -->
-  <!--Chart Config-->
 
 
 </head>
@@ -136,8 +132,8 @@
     });
 
 
-    var chart = document.getElementById('chartdiv').getContext('2d'),
-      gradient = chart.createLinearGradient(0, 0, 0, 350);
+    var chart = document.getElementById('chartdiv').getContext('2d');
+    var  gradient = chart.createLinearGradient(0, 0, 0, 350);
 
     gradient.addColorStop(0.8, '#a34dd0');
     gradient.addColorStop(0.7, '#5b4fc0');
