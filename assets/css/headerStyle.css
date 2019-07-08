@@ -50,9 +50,8 @@ header {
   .logo-container {
     margin-bottom: 10px;
   }
+
   #page-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   #page-nav label {
@@ -71,11 +70,11 @@ header {
     height: 100%;
     padding: 40px 20px 20px 20px;
     -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
   }
   #page-nav .small_menu .close_menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 25px;
     height: 25px;
@@ -86,17 +85,11 @@ header {
     left: 10px;
     top: 10px;
     z-index: 100;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
   #page-nav .small_menu ul {
-    -webkit-box-pack: inherit !important;
-        -ms-flex-pack: inherit !important;
-            justify-content: inherit !important;
+    justify-content: inherit !important;
     display: block !important;
   }
   #page-nav .small_menu ul li a {
@@ -108,48 +101,40 @@ header {
     color: #fff;
   }
 }
-
 @media screen and (max-width: 767px) {
   .title,
   .costLabel {
     font-size: 14px;
   }
+
   .costDetail,
   .header-nav {
     font-size: 12px;
   }
 }
-
 @media screen and (max-width: 425px) {
   .logo-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .logo-container img {
     width: 200px;
   }
+
   header {
     position: relative;
   }
 }
-
 @media screen and (max-width: 375px) {
   .logo-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+
   header {
     position: relative;
   }
 }
-
 @media screen and (max-width: 360px) {
   .title, .costLabel {
     font-size: 12px;
   }
 }
-/*# sourceMappingURL=headerStyle.css.map */

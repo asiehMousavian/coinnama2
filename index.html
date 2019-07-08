@@ -20,6 +20,9 @@
   <link rel="stylesheet" type="text/css" href="assets/css/dataTableStyle.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+
+  <script type="text/javascript" src="assets/js/Chart.min.js"></script>
+
 </head>
 
 <body>
@@ -37,7 +40,7 @@
               <div class="col-xl-8 col-lg-8 col-md-8 col-sm-10 col-10">
                 <div class="d-flex">
                     <div class="costLabel">قیمت دلار سنا 19 اردیبهشت</div>
-                    <div class="costDetail">14600 تومان <a href="" class="warningLabel" style="font-size: 12px">«تغییر»</a>
+                    <div class="costDetail">14600 تومان <a href="" id= "changeLabel" class="warningLabel" style="font-size: 12px">«تغییر»</a>
                     </div>
                 </div>
               </div>
@@ -92,20 +95,39 @@
             <tbody>
               <tr class="">
                 <td class="">1</td>
-                <td class="warningLabel">Bitcoin(BTS) </td>
+                <td class="warningLabel">
+                    Bitcoin(BTS)  
+                  <!-- <div class="" style="direction: ltr;line-height: 18px;text-align: left;">
+                    <img src="assets/images/usa.png" alt="" style="width:16px; margin-right: 3px">
+                    Bitcoin(BTS)
+                  </div> -->
+                   
+                </td>
+
                 <td class="">$52.073.374</td>
                 <td class="dangerLabel">-3.77</td>
                 <td>90,000,000</td>
-                <td><img src="" alt=""></td>
+                <td>
+                  <div class="chart-container">
+                    <canvas id="chart-1"></canvas>
+                  </div>
+                </td>
               </tr>
 
               <tr class="">
                 <td class="">2</td>
-                <td class="warningLabel">Ethereum(ETC)</td>
+                <td class="warningLabel">
+
+                  Ethereum(ETC)
+                </td>
                 <td class="">$21,841,555</td>
                 <td class="infoLabel">+0.11</td>
                 <td>7,050,325,000</td>
-                <td><img src="" alt=""></td>
+                <td>
+                    <div class="chart-container">
+                        <canvas id="chart-2"></canvas>
+                      </div>
+                </td>
               </tr>
 
               <tr class="">
@@ -114,7 +136,9 @@
                 <td class="">$52,205,415</td>
                 <td class="dangerLabel">-9.12</td>
                 <td>24,765,550,112</td>
-                <td><img src="" alt=""></td>
+                <td>  <div class="chart-container">
+                    <canvas id="chart-3"></canvas>
+                  </div></td>
               </tr>
 
               <tr class="">
@@ -123,7 +147,11 @@
                 <td class="">$21,841,555</td>
                 <td class="infoLabel">+0.11</td>
                 <td>7,050,325,000</td>
-                <td><img src="" alt=""></td>
+                <td>
+                    <div class="chart-container">
+                        <canvas id="chart-4"></canvas>
+                      </div>
+                </td>
               </tr>
 
               <tr class="">
@@ -132,7 +160,11 @@
                 <td class="">$52,205,415</td>
                 <td class="dangerLabel">-9.12</td>
                 <td>24,765,550,112</td>
-                <td><img src="" alt=""></td>
+                <td>
+                    <div class="chart-container">
+                        <canvas id="chart-5"></canvas>
+                      </div>
+                </td>
               </tr>
               <tr class="">
                         <td>6</td>
@@ -140,7 +172,9 @@
                         <td class="">$21,841,555</td>
                         <td class="infoLabel">+0.11</td>
                         <td>7,050,325,000</td>
-                        <td><img src="" alt=""></td>
+                        <td>  <div class="chart-container">
+                            <canvas id="chart-6"></canvas>
+                          </div></td>
                     </tr>
   
                     <tr class="evenRow">
@@ -233,6 +267,9 @@
                         </div>
                   </div>
                   <div class="countryDropDown-wrapper">
+                 
+                      <input type="text" class="form-control" placeholder="Search.." id="country-search">
+                   
                       <div class="listItem">
                           <div class="d-flex justify-content-between">
                               <div class="mr-auto"> 
@@ -300,6 +337,7 @@
                           </div>
                     </div>
                     <div class="coinDropDown-wrapper">
+                      <input type="text" class="form-control" placeholder="Search.." id="coin-search">
 
                       <div class="listItem">
                           <div class="d-flex justify-content-between">
@@ -392,6 +430,8 @@
                     </div>
               </div>
               <div class="modalcountryDropDown-wrapper">
+                  <input type="text" class="form-control" placeholder="Search.." id="modal-search">
+
                   <div class="modallistItem">
                         <div class="d-flex modalItem">
                           <div class="mr-auto"> 
@@ -441,9 +481,135 @@
   <script type="text/javascript" src="assets/js/datatables.min.js"></script>
   <script type="text/javascript" src="assets/js/select2.js"></script>
   <script type="text/javascript" src="assets/js/dataTables.fixedColumns.min.js"></script>
-  <script type="text/javascript" src="assets/js/coin.js">
-  </script>
+  <script type="text/javascript" src="assets/js/coin.js"></script>
+
   <!-- JS Files -->
+
+  <script>
+
+    $(document).ready(function(){
+  var data = {
+    labels: ["a","b","c","d","e","f","g","h","i","j","k"],
+    datasets: [{
+      radius: 0,
+      borderWidth: 1,
+      borderColor: "#ff4350",
+      data: [1, 55, 32, 81, 3, 50,20, 55, 2, 81, 13, 50]
+    }]
+  };
+  var options = {
+    // responsive: true,
+    // maintainAspectRatio: true,
+    // animation: {
+    //   easing: 'easeInOutQuad',
+    //   duration: 0
+    // },
+
+    elements: {
+      line: {
+        tension: 0
+      }
+    },
+    legend: {
+      display: false
+    },
+    tooltips: {
+      titleFontFamily: 'AnjomanFaNum-Regular',
+      backgroundColor: 'rgba(0,0,0,0.3)',
+      titleFontColor: 'red',
+      caretSize: 5,
+      cornerRadius: 2,
+      xPadding: 10,
+      yPadding: 10
+    },
+    scales: {
+        xAxes: [{
+          display:false,
+            gridLines: {
+                ticks: {
+                    display: false
+                }
+            }
+        }],
+        yAxes: [{
+          display:false,
+            gridLines: {
+                
+                ticks: {
+                    display:false
+                }
+            }   
+        }]
+    }
+  };
+  
+  
+  
+  //------------------------------------------------------------------------
+  var chart1 = document.getElementById('chart-1').getContext('2d');
+  var chartInstance1 = new Chart(chart1, {
+    type: 'line',
+    data: data,
+    options: options
+  });
+  chartInstance1.data.datasets[0].borderColor = '#ff4350';
+  chartInstance1.update();
+
+  //------------------------------------------------------------------------
+
+  var chart2 = document.getElementById('chart-2').getContext('2d');
+  var chartInstance2 = new Chart(chart2, {
+    type: 'line',
+    data: data,
+    options: options
+  });
+  chartInstance2.data.datasets[0].borderColor = '#ff4350';
+  chartInstance2.update();
+
+  //------------------------------------------------------------------------
+
+  var chart3 = document.getElementById('chart-3').getContext('2d');
+  var chartInstance3 = new Chart(chart3, {
+    type: 'line',
+    data: data,
+    options: options
+  });
+  chartInstance3.data.datasets[0].borderColor = '#3bd5a2';
+  chartInstance3.update();
+  //------------------------------------------------------------------------
+  
+  var chart4 = document.getElementById('chart-4').getContext('2d');
+  var chartInstance4 = new Chart(chart4, {
+    type: 'line',
+    data: data,
+    options: options
+  });
+  chartInstance4.data.datasets[0].borderColor = '#ff4350';
+  chartInstance4.update();
+
+  //------------------------------------------------------------------------
+
+  var chart5 = document.getElementById('chart-5').getContext('2d');
+  var chartInstance5 = new Chart(chart5, {
+    type: 'line',
+    data: data,
+    options: options
+  });
+  chartInstance5.data.datasets[0].borderColor = '#ff4350';
+  chartInstance5.update();
+
+  //------------------------------------------------------------------------
+
+  var chart6 = document.getElementById('chart-6').getContext('2d');
+  var chartInstance6 = new Chart(chart6, {
+    type: 'line',
+    data: data,
+    options: options
+  });
+  chartInstance6.data.datasets[0].borderColor = '#3bd5a2';
+  chartInstance6.update();
+});
+  </script>
 
 </body>
 

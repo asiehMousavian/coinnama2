@@ -1,13 +1,8 @@
-body {
-  font-family: AnjomanFaNum-Regular;
-}
-
 .captionFigure {
   display: inline-block;
   text-align: center;
   margin-bottom: 25px;
 }
-
 .captionFigure img {
   margin-bottom: 20px;
 }
@@ -34,7 +29,6 @@ body {
   direction: ltr;
   color: #afb2be;
 }
-
 .worthCurrency label span {
   color: #5a5c6c;
 }
@@ -44,7 +38,6 @@ body {
   color: #3bd5a2;
   font-size: 16px;
 }
-
 .lastWeek label span {
   color: #5a5c6b;
 }
@@ -55,20 +48,17 @@ body {
   margin-top: 20px;
   padding: 0 15px;
 }
-
 .report-wrapper .rowHeader {
   color: #595b67;
   font-size: 16px;
   padding: 15px 0 5 0;
 }
-
 .report-wrapper .rowTitle {
   color: #dddfe8;
   font-size: 20px;
   direction: ltr;
   padding: 5px 0 15px 0;
 }
-
 .report-wrapper .lightSpan {
   font-family: AnjomanFaNum-Light;
   font-size: 16px;
@@ -79,7 +69,6 @@ body {
   border-radius: 10px;
   margin-top: 20px;
 }
-
 .chart-wrapper .mychart {
   width: 100%;
   max-height: 600px;
@@ -96,7 +85,6 @@ canvas {
     display: block;
   }
 }
-
 @media screen and (max-width: 425px) {
   .report-wrapper .rowHeader {
     font-size: 13px;
@@ -105,7 +93,6 @@ canvas {
     font-size: 16px;
   }
 }
-
 @media screen and (max-width: 375px) {
   .report-wrapper .rowHeader {
     font-size: 13px;
@@ -116,7 +103,6 @@ canvas {
     padding: 5px 0;
   }
 }
-
 @media screen and (max-width: 320px) {
   .report-wrapper .rowHeader {
     font-size: 10px;
@@ -125,4 +111,3 @@ canvas {
     font-size: 10px;
   }
 }
-/*# sourceMappingURL=singleStyle.css.map */

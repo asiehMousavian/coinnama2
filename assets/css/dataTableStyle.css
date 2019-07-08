@@ -26,7 +26,7 @@ table.dataTable thead .sorting {
 
 table.dataTable thead .sorting_desc {
   /* background-image: url(/assets/images/dsc.png) ; 
-    background-position:center left; */
+  background-position:center left; */
   background-image: none;
 }
 
@@ -77,12 +77,8 @@ div.dataTables_wrapper {
 
 .dataTables_paginate {
   width: 100%;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 20px;
   margin-top: 20px;
 }
@@ -125,14 +121,10 @@ div.dataTables_wrapper {
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.next::before,
 .dataTables_wrapper .dataTables_paginate .paginate_button.next:hover::before {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 5px 8px;
-  content: "صفحه بعد";
+  content: "صفحه قبل";
   font-size: 8px;
   line-height: 10px;
 }
@@ -145,19 +137,14 @@ div.dataTables_wrapper {
   background: #383e5c !important;
   font-size: 0;
   line-height: 10px;
-  /* padding: 0 5px; */
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.previous::before,
 .dataTables_wrapper .dataTables_paginate .paginate_button.previous:hover::before {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 5px 8px;
-  content: "صفحه قبل";
+  content: "صفحه بعد";
   font-size: 8px;
   line-height: 10px;
 }
@@ -168,4 +155,13 @@ div.dataTables_wrapper {
   color: #747576 !important;
   background: #323337 !important;
 }
-/*# sourceMappingURL=dataTableStyle.css.map */
+
+.chart-container {
+  width: 92px;
+  height: 20px;
+  margin: 0 auto;
+}
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}

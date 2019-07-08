@@ -6,15 +6,7 @@
   font-size: 100%;
   vertical-align: baseline;
 }
-body {
-  font-size: 12px;
-  background-color: #17181c;
-  color: #fff;
-  font-family: "Iransans";
-  padding: 0 !important;
-  overflow-x: hidden !important;
-  position: relative;
-}
+
 a {
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -109,6 +101,16 @@ img {
   font-weight: 300;
   src: url("../fonts/eot/AnjomanFaNum-Bold.eot");
   src: url("../fonts/eot/AnjomanFaNum-Bold.eot") format("embedded-opentype"), url("../fonts/woff2/AnjomanFaNum-Bold.woff2") format("woff2"), url("../fonts/woff/AnjomanFaNum-Bold.woff") format("woff"), url("../fonts/ttf/AnjomanFaNum-Bold.ttf") format("truetype");
+}
+
+body {
+  font-size: 12px;
+  background-color: #17181c;
+  color: #fff;
+  font-family: "AnjomanFaNum-Regular";
+  padding: 0 !important;
+  overflow-x: hidden !important;
+  position: relative;
 }
 
 
