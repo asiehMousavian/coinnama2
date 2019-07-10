@@ -1,3 +1,25 @@
+.date-wrapper {
+  background: #1b1c21;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 0 15px;
+}
+.date-wrapper .date-time-picker {
+  margin: 10px 0;
+}
+.date-wrapper .date-time-picker .form-control {
+  font-size: 20pX;
+  line-height: 24px;
+  border-radius: 10px;
+  background-color: #15161a;
+  border: none;
+  color: #afb2be;
+}
+.date-wrapper .date-time-picker .form-control:focus {
+  background-color: #15161a;
+  box-shadow: none;
+}
+
 .captionFigure {
   display: inline-block;
   text-align: center;
@@ -91,6 +113,10 @@ canvas {
   }
   .report-wrapper .rowTitle {
     font-size: 16px;
+  }
+
+  .worthCurrency label {
+    font-size: 38px;
   }
 }
 @media screen and (max-width: 375px) {

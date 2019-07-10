@@ -20,6 +20,35 @@ $small_text-size:13px;
 //     font-family: AnjomanFaNum-Regular;
 // }
 
+
+.date-wrapper {
+    background: $back-color;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 0 15px;
+
+    .date-time-picker {
+         margin: 10px 0;
+
+        .form-control {
+            font-size: 20pX;
+            line-height: 24px;
+            border-radius: 10px;
+            background-color: #15161a;
+            border: none;
+            color: $normal-color;
+
+            &:focus {
+                background-color: #15161a;
+                box-shadow: none;
+
+            }
+        }
+    }
+
+}
+
+
 .captionFigure
 {
     display: inline-block;
@@ -135,16 +164,21 @@ canvas {
   
     .report-wrapper
     {
-        .rowHeader
-        {
+        .rowHeader {
             font-size: $small_text-size;
         }
-        .rowTitle
-        {
+
+        .rowTitle {
             font-size: $medium_text-size;
         }
     }
-}
+
+    .worthCurrency {
+        label {
+            font-size: 38px;
+        }
+    }
+    }
 @media screen and (max-width: 375px) {
   
     .report-wrapper

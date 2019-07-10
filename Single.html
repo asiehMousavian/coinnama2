@@ -11,17 +11,18 @@
   <meta name="keywords" content="">
   <meta name="author" content="">
 
-
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.rtl.css">
-
 
   <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
   <link rel="stylesheet" type="text/css" href="assets/css/headerStyle.css">
   <link rel="stylesheet" type="text/css" href="assets/css/singleStyle.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/kamadatepicker.min.css">
+
 
   <script type="text/javascript" src="assets/js/Chart.min.js"></script>
 
+  <script type="text/javascript" src="assets/js/kamadatepicker.min.js"></script>
 
 </head>
 
@@ -103,7 +104,21 @@
               </div>
             </div>
           </div>
+
+
+          <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-12 date-wrapper">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 date-time-picker">
+                <input class="form-control" type="text" id="date1" placeholder="از تاریخ">
+              </div>
+
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 date-time-picker">
+                <input class="form-control" type="text" id="date2" placeholder="تا تاریخ">
+              </div>
+            </div>
+          </div>
           <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-12 chart-wrapper">
+
             <canvas id="chartdiv" class="mychart"></canvas>
           </div>
 
@@ -120,99 +135,140 @@
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 
 
+
   <script>
 
     $(document).ready(function () {
+      kamaDatepicker('date1', {
+        nextButtonIcon: "assets/images/timeir_prev.png"
+        , previousButtonIcon: "assets/images/timeir_next.png"
+        , forceFarsiDigits: true
+        , markToday: true
+        , markHolidays: true
+        , highlightSelectedDay: true
+        , sync: true
+        , pastYearsCount: 0
+        , futureYearsCount: 3
+        , swapNextPrev: true
+      });
+
+    });
+
+    $(document).ready(function () {
+      kamaDatepicker('date2', {
+        nextButtonIcon: "assets/images/timeir_prev.png"
+        , previousButtonIcon: "assets/images/timeir_next.png"
+        , forceFarsiDigits: true
+        , markToday: true
+        , markHolidays: true
+        , highlightSelectedDay: true
+        , sync: true
+        , pastYearsCount: 0
+        , futureYearsCount: 3
+        , swapNextPrev: true
+      });
+    });
+
+
+    $(document).ready(function () {
+
+
       $('#hamburger').click(function () {
         $(this).next().css('left', '0px');
       });
       $('.close_menu').click(function () {
         $(this).parent().css('left', '-250px');
       });
-    });
 
 
-    var chart = document.getElementById('chartdiv').getContext('2d');
-    var  gradient = chart.createLinearGradient(0, 0, 0, 350);
-
-    gradient.addColorStop(0.8, '#a34dd0');
-    gradient.addColorStop(0.7, '#5b4fc0');
-    gradient.addColorStop(0.3, '#4b99f0');
-    gradient.addColorStop(0.4, '#47d1de');
-    gradient.addColorStop(0.5, '#42ce9a');
-
-    var data = {
-      labels: ["همه", "6 ماه ", "3 ماه ", "این ماه", "این هفته", "امروز"],
-      datasets: [{
-        label: '',
-        // backgroundColor: gradient,
-        pointBackgroundColor: 'white',
-        borderWidth: 5,
-        borderColor: gradient,
-        data: [50, 55, 80, 81, 54, 50]
-      }]
-    };
 
 
-    var options = {
-      responsive: true,
-      maintainAspectRatio: true,
-      animation: {
-        easing: 'easeInOutQuad',
-        duration: 520
-      },
-      scales: {
-        xAxes: [{
-          gridLines: {
-            color: 'rgba(200, 200, 200, 0.05)',
-            lineWidth: 1
-          }
-        }],
-        yAxes: [{
-          gridLines: {
-            color: 'rgba(200, 200, 200, 0.08)',
-            lineWidth: 1
-          }
+
+
+
+
+      var chart = document.getElementById('chartdiv').getContext('2d');
+      var gradient = chart.createLinearGradient(0, 0, 0, 350);
+
+      gradient.addColorStop(0.8, '#a34dd0');
+      gradient.addColorStop(0.7, '#5b4fc0');
+      gradient.addColorStop(0.3, '#4b99f0');
+      gradient.addColorStop(0.4, '#47d1de');
+      gradient.addColorStop(0.5, '#42ce9a');
+
+      var data = {
+        labels: ["همه", "6 ماه ", "3 ماه ", "این ماه", "این هفته", "امروز"],
+        datasets: [{
+          label: '',
+          // backgroundColor: gradient,
+          pointBackgroundColor: 'white',
+          borderWidth: 5,
+          borderColor: gradient,
+          data: [50, 55, 80, 81, 54, 50]
         }]
-      },
-      elements: {
-        line: {
-          tension: 0.4
+      };
+
+
+      var options = {
+        responsive: true,
+        maintainAspectRatio: true,
+        animation: {
+          easing: 'easeInOutQuad',
+          duration: 520
+        },
+        scales: {
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(200, 200, 200, 0.05)',
+              lineWidth: 1
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              color: 'rgba(200, 200, 200, 0.08)',
+              lineWidth: 1
+            }
+          }]
+        },
+        elements: {
+          line: {
+            tension: 0.4
+          }
+        },
+        legend: {
+          display: false
+          //  labels : {
+          //   fontColor : '#ffffff'  
+          // }
+        },
+        point: {
+          backgroundColor: '#1b1c21',
+          borderWidth: 5,
+          borderColor: '#dcdde3'
+        },
+        tooltips: {
+          titleFontFamily: 'AnjomanFaNum-Regular',
+          backgroundColor: 'rgba(0,0,0,0.3)',
+          titleFontColor: 'red',
+          caretSize: 5,
+          cornerRadius: 2,
+          xPadding: 10,
+          yPadding: 10
+        },
+        scales: {
+          yAxes: [{ ticks: { fontSize: 0, fontFamily: "AnjomanFaNum-Regular", fontColor: '#000', fontStyle: '500' } }],
+          xAxes: [{ ticks: { fontSize: 16, fontFamily: "AnjomanFaNum-Regular", fontColor: '#5a5c6b', fontStyle: '500' } }]
         }
-      },
-      legend: {
-        display: false
-        //  labels : {
-        //   fontColor : '#ffffff'  
-        // }
-      },
-      point: {
-        backgroundColor: '#1b1c21',
-        borderWidth: 5,
-        borderColor: '#dcdde3'
-      },
-      tooltips: {
-        titleFontFamily: 'AnjomanFaNum-Regular',
-        backgroundColor: 'rgba(0,0,0,0.3)',
-        titleFontColor: 'red',
-        caretSize: 5,
-        cornerRadius: 2,
-        xPadding: 10,
-        yPadding: 10
-      },
-      scales: {
-        yAxes: [{ ticks: { fontSize: 0, fontFamily: "AnjomanFaNum-Regular", fontColor: '#000', fontStyle: '500' } }],
-        xAxes: [{ ticks: { fontSize: 16, fontFamily: "AnjomanFaNum-Regular", fontColor: '#5a5c6b', fontStyle: '500' } }]
-      }
-    };
+      };
 
 
-    var chartInstance = new Chart(chart, {
-      type: 'line',
-      data: data,
-      options: options
+      var chartInstance = new Chart(chart, {
+        type: 'line',
+        data: data,
+        options: options
+      });
+
     });
-
   </script>
 
 
