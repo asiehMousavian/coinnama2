@@ -20,9 +20,9 @@
   <link rel="stylesheet" type="text/css" href="assets/css/kamadatepicker.min.css">
 
 
-  <script type="text/javascript" src="assets/js/Chart.min.js"></script>
 
   <script type="text/javascript" src="assets/js/kamadatepicker.min.js"></script>
+  <script type="text/javascript" src="assets/js/Chart.min.js"></script>
 
 </head>
 
@@ -105,7 +105,7 @@
             </div>
           </div>
 
-
+          <!-- 
           <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-12 date-wrapper">
             <div class="row">
               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 date-time-picker">
@@ -116,10 +116,33 @@
                 <input class="form-control" type="text" id="date2" placeholder="تا تاریخ">
               </div>
             </div>
-          </div>
-          <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-12 chart-wrapper">
+          </div> -->
 
-            <canvas id="chartdiv" class="mychart"></canvas>
+
+          <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 col-12 chart-wrapper">
+            <div class="btn-group btn-group-toggle d-flex" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> همه
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2" autocomplete="off"> 6 ماه
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3" autocomplete="off"> 3 ماه
+              </label>
+              <label class="btn btn-secondary ">
+                <input type="radio" name="options" id="option4" autocomplete="off" > این ماه
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option5" autocomplete="off"> این هفته
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option6" autocomplete="off"> امروز
+              </label>
+            </div>
+            <div class="chart2-container">
+              <canvas id="chartdiv" class="mychart"></canvas>
+            </div>
           </div>
 
         </div>
@@ -132,42 +155,43 @@
 
 
   <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <script type="text/javascript" src="assets/js/Chart.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 
 
 
   <script>
 
-    $(document).ready(function () {
-      kamaDatepicker('date1', {
-        nextButtonIcon: "assets/images/timeir_prev.png"
-        , previousButtonIcon: "assets/images/timeir_next.png"
-        , forceFarsiDigits: true
-        , markToday: true
-        , markHolidays: true
-        , highlightSelectedDay: true
-        , sync: true
-        , pastYearsCount: 0
-        , futureYearsCount: 3
-        , swapNextPrev: true
-      });
+    // $(document).ready(function () {
+    //   kamaDatepicker('date1', {
+    //     nextButtonIcon: "assets/images/timeir_prev.png"
+    //     , previousButtonIcon: "assets/images/timeir_next.png"
+    //     , forceFarsiDigits: true
+    //     , markToday: true
+    //     , markHolidays: true
+    //     , highlightSelectedDay: true
+    //     , sync: true
+    //     , pastYearsCount: 0
+    //     , futureYearsCount: 3
+    //     , swapNextPrev: true
+    //   });
 
-    });
+    // });
 
-    $(document).ready(function () {
-      kamaDatepicker('date2', {
-        nextButtonIcon: "assets/images/timeir_prev.png"
-        , previousButtonIcon: "assets/images/timeir_next.png"
-        , forceFarsiDigits: true
-        , markToday: true
-        , markHolidays: true
-        , highlightSelectedDay: true
-        , sync: true
-        , pastYearsCount: 0
-        , futureYearsCount: 3
-        , swapNextPrev: true
-      });
-    });
+    // $(document).ready(function () {
+    //   kamaDatepicker('date2', {
+    //     nextButtonIcon: "assets/images/timeir_prev.png"
+    //     , previousButtonIcon: "assets/images/timeir_next.png"
+    //     , forceFarsiDigits: true
+    //     , markToday: true
+    //     , markHolidays: true
+    //     , highlightSelectedDay: true
+    //     , sync: true
+    //     , pastYearsCount: 0
+    //     , futureYearsCount: 3
+    //     , swapNextPrev: true
+    //   });
+    // });
 
 
     $(document).ready(function () {
@@ -179,10 +203,6 @@
       $('.close_menu').click(function () {
         $(this).parent().css('left', '-250px');
       });
-
-
-
-
 
 
 
@@ -228,6 +248,10 @@
               color: 'rgba(200, 200, 200, 0.08)',
               lineWidth: 1
             }
+            //   scaleLabel: {
+            //   display: true,
+            //   labelString: "value"
+            // }
           }]
         },
         elements: {
@@ -258,6 +282,21 @@
         scales: {
           yAxes: [{ ticks: { fontSize: 0, fontFamily: "AnjomanFaNum-Regular", fontColor: '#000', fontStyle: '500' } }],
           xAxes: [{ ticks: { fontSize: 16, fontFamily: "AnjomanFaNum-Regular", fontColor: '#5a5c6b', fontStyle: '500' } }]
+        },
+        pan: {
+          enabled: true,
+          mode: "x",
+          speed: 10,
+          threshold: 10
+        },
+        zoom: {
+          enabled: true,
+          drag: false,
+          mode: "xy",
+          limits: {
+            max: 10,
+            min: 0.5
+          }
         }
       };
 
@@ -265,7 +304,8 @@
       var chartInstance = new Chart(chart, {
         type: 'line',
         data: data,
-        options: options
+        options: options,
+        height: 450
       });
 
     });
